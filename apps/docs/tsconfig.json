@@ -8,15 +8,11 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "contentlayer/generated": [
-        "./.contentlayer/generated",
-      ],
+      "contentlayer/generated": ["./.contentlayer/generated"],
       "@/components/ui": [
         "./../../packages/ui/src" // Mock importing as local components
       ],
-      "@/*": [
-        "./*"
-      ],
+      "@/*": ["./*"]
     },
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
@@ -32,7 +28,5 @@
     ".next/types/**/*.ts",
     ".contentlayer/generated"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }

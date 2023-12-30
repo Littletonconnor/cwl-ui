@@ -35,14 +35,10 @@ const BreadcrumbItem = ({
 }: BreadcrumbItemProps) => {
   return (
     <BaseBreadcrumb className="flex items-center gap-1" {...props}>
-      <Link className="text-slate-500 hover:underline current:text-black current:hover:no-underline dark:text-slate-300 dark:current:text-white">
+      <Link className="text-slate-500 hover:underline current:text-black current:hover:no-underline">
         {children}
       </Link>
-      {separator ? (
-        <div aria-hidden="true" className="text-slate-400 dark:text-slate-500">
-          {separator}
-        </div>
-      ) : null}
+      {separator ?? null}
     </BaseBreadcrumb>
   )
 }

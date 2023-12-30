@@ -1,7 +1,8 @@
-import { BreadcrumbItem, Breadcrumbs } from 'cwl-ui'
-import { ChevronRight } from 'lucide-react'
+import { Breadcrumbs } from 'cwl-ui'
 
 import { type Meta } from '@storybook/react'
+
+import DefaultStory from './stories/default'
 
 const meta: Meta<typeof Breadcrumbs> = {
   title: 'Breadcrumbs',
@@ -10,16 +11,4 @@ const meta: Meta<typeof Breadcrumbs> = {
 
 export default meta
 
-export const Default = () => {
-  return (
-    <Breadcrumbs>
-      <BreadcrumbItem separator={<ChevronRight size="1em" />}>
-        <a href="#">Home</a>
-      </BreadcrumbItem>
-      <BreadcrumbItem separator={<ChevronRight size="1em" />}>
-        <a href="#">React Aria</a>
-      </BreadcrumbItem>
-      <BreadcrumbItem>useBreadcrumbs</BreadcrumbItem>
-    </Breadcrumbs>
-  )
-}
+export const Default = () => <DefaultStory />
