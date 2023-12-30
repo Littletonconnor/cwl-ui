@@ -4,14 +4,10 @@ const path = require('path')
 module.exports = {
   root: true,
   extends: ['custom'],
-  rules: {
-    '@next/next/no-html-link-for-pages': 'off',
-    '@typescript-eslint/no-empty-function': 'off',
-  },
+  plugins: ['eslint-plugin-storybook'],
   settings: {
     tailwindcss: {
       config: path.join(__dirname, './tailwind.config.js'),
     },
   },
-  ignorePatterns: ['registry/**/*.tsx'],
 }

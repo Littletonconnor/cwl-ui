@@ -27,6 +27,11 @@ out/
 build
 dist
 
+# Storybook
+storybook-static/
+
+# Typescript
+*.tsbuildinfo
 
 # Debug
 npm-debug.log*
