@@ -4,7 +4,7 @@ import Link from 'next/link'
 export default function Navigation() {
   return (
     <div className="fixed inset-x-0 top-0 z-10 h-14 border-b bg-white">
-      <div className="mx-auto flex h-full w-full items-center px-6">
+      <div className="mx-auto flex h-full w-full max-w-7xl items-center px-8">
         <Link
           href="/"
           aria-label="Home"

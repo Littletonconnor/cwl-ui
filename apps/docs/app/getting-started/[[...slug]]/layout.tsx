@@ -1,6 +1,6 @@
 'use client'
 
-import { allComponentDocuments } from 'contentlayer/generated'
+import { allGeneralDocuments } from 'contentlayer/generated'
 import { notFound } from 'next/navigation'
 import { Link } from 'react-aria-components'
 
@@ -30,13 +30,10 @@ interface DocsLayoutProps {
 }
 
 export default function DocsLayout({ params, children }: DocsLayoutProps) {
-  const sortedComponents = allComponentDocuments
-    .filter((doc) => doc.isComponent === true)
-    .sort((a, b) => a.title.localeCompare(b.title))
-
-  const post = allComponentDocuments.find((post) => {
+  const post = allGeneralDocuments.find((post) => {
     return (
-      post._raw.flattenedPath.replace('docs/', '') === params.slug.join('/')
+      post._raw.flattenedPath.replace('getting-started/', '') ===
+      params.slug.join('/')
     )
   })
 
@@ -48,7 +45,7 @@ export default function DocsLayout({ params, children }: DocsLayoutProps) {
     <div className="container mx-auto h-full max-w-7xl px-6">
       <Navigation />
       <aside className="fixed top-0 hidden h-full shrink-0 border-r pt-14 md:w-40 lg:block">
-        <nav className="h-full overflow-y-auto px-2 py-12" tabIndex={-1}>
+        <nav className="h-full overflow-y-auto py-12" tabIndex={-1}>
           <div className="mb-4">
             <h4 className="text-lg font-medium text-zinc-900">
               Getting Started

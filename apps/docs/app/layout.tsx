@@ -1,11 +1,9 @@
 import { cx } from '@/lib/cva.config'
+import { fontSans } from '@/lib/fonts'
 
 import '../styles/globals.css'
 
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'CWL UI',
@@ -20,7 +18,7 @@ export default function RootLayout({
 }): JSX.Element {
   return (
     <html lang="en">
-      <body className={cx('h-full', inter.className)}>{children}</body>
+      <body className={cx('h-full', fontSans.className)}>{children}</body>
     </html>
   )
 }

@@ -21,6 +21,9 @@ export const ComponentDocument = defineDocumentType(() => ({
     description: {
       type: 'string',
     },
+    ariaPattern: {
+      type: 'string',
+    },
     isComponent: {
       type: 'boolean',
     },
@@ -56,6 +59,10 @@ export const GeneralDocument = defineDocumentType(() => ({
       type: 'string',
       required: true,
     },
+    ariaPattern: {
+      type: 'string',
+      required: false,
+    },
   },
   computedFields: {
     slug: {
@@ -71,7 +78,7 @@ export const GeneralDocument = defineDocumentType(() => ({
 
 export const ChangelogDocument = defineDocumentType(() => ({
   name: 'ChangelogDocument',
-  filePathPattern: 'CHANGELOG.mdx',
+  filePathPattern: 'changelog.mdx',
   contentType: 'mdx',
   fields: {
     title: {
@@ -129,7 +136,7 @@ export default makeSource({
         rehypePrettyCode,
         {
           getHighlighter: async () => {
-            return await getHighlighter({ theme: 'dracula' })
+            return await getHighlighter({ theme: 'github-light' })
           },
           onVisitLine(node) {
             // Prevent lines from collapsing in `display: grid` mode, and allow empty

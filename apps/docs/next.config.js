@@ -8,6 +8,11 @@ module.exports = {
         destination: '/docs/components/breadcrumbs',
         permanent: true,
       },
+      {
+        source: '/getting-started',
+        destination: '/getting-started/introduction',
+        permanent: true,
+      },
     ]
   },
 }

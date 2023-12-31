@@ -20,5 +20,5 @@ export default function Heading({ slug, lvl, children }: HeadingProps) {
     children,
   )
 
-  return <div className="mt-[2em]">{headingEl}</div>
+  return headingEl
 }
