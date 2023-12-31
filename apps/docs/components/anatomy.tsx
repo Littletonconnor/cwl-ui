@@ -32,16 +32,16 @@ function getSvgEl(source: string) {
           <path
             d="M53 56L57 52L53 48"
             stroke="black"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M168 56L172 52L168 48"
             stroke="black"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <circle cx="28" cy="38" r="1.5" fill="black" stroke="black" />
           <line x1="28" y1="12" x2="28" y2="36" stroke="black" />

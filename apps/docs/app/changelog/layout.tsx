@@ -40,21 +40,21 @@ export default function ChangelogLayout({ children }: ChangelogLayoutProps) {
   }
 
   return (
-    <div className="container mx-auto h-full max-w-7xl px-6">
+    <div className="relative flex min-h-screen w-full flex-col">
       <Navigation />
-      <aside className="fixed top-0 hidden h-full shrink-0 border-r pt-14 md:w-40 lg:block">
-        <nav className="h-full overflow-y-auto py-12" tabIndex={-1}>
-          <div className="mb-4">
-            <h4 className="text-lg font-medium text-zinc-900">
-              Getting Started
-            </h4>
-            <div className="mt-3">
+      <main className="container mx-auto flex-1 items-start px-8 pt-14 md:grid md:grid-cols-[220px_minmax(0,1fr)] md:gap-6 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-10">
+        <aside className="hidden w-full shrink-0 md:sticky md:block">
+          <nav className="h-full overflow-y-auto py-6 lg:py-8" tabIndex={-1}>
+            <div className="mb-4">
+              <h4 className="px-2 py-1 text-sm font-semibold">
+                Getting Started
+              </h4>
               <ul>
                 {gettingStartedLinks.map((link) => (
                   <li key={link.slug}>
                     <Link
                       className={cx(
-                        'flex justify-between gap-2 items-center text-sm py-1 rounded-sm text-zinc-600',
+                        'flex justify-between gap-2 items-center text-sm font-light px-2 py-1 rounded-sm text-zinc-600',
                         'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-zinc-500 hover:underline',
                       )}
                       href={link.slug}
@@ -65,10 +65,10 @@ export default function ChangelogLayout({ children }: ChangelogLayoutProps) {
                 ))}
               </ul>
             </div>
-          </div>
-        </nav>
-      </aside>
-      <section className="pt-14">{children}</section>
+          </nav>
+        </aside>
+        {children}
+      </main>
     </div>
   )
 }

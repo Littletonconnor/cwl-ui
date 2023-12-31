@@ -1,29 +1,46 @@
-import { GithubIcon } from 'lucide-react'
+'use client'
+
+import { GithubIcon, PencilIcon } from 'lucide-react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+
+import { cx } from '@/lib/cva.config'
 
 export default function Navigation() {
+  const pathname = usePathname()
   return (
-    <div className="fixed inset-x-0 top-0 z-10 h-14 border-b bg-white">
-      <div className="mx-auto flex h-full w-full max-w-7xl items-center px-8">
+    <header className="fixed top-0 z-10 w-full border-b bg-white">
+      <div className="container mx-auto flex h-14 max-w-screen-2xl items-center px-8">
         <Link
           href="/"
           aria-label="Home"
-          className="flex items-center gap-2 font-semibold"
+          className="flex items-center gap-1 font-semibold"
         >
+          <PencilIcon className="h-4 w-4" />
           <span>CWL UI</span>
         </Link>
         {/* ---- DESKTOP NAV ---- */}
         <nav className="flex grow items-center">
-          <div className="ml-14 hidden items-center gap-8 lg:flex">
+          <div className="ml-14 hidden items-center gap-4 lg:flex">
             <Link
               href="/getting-started"
-              className="rounded-sm text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 focus-visible:ring-offset-2"
+              className={cx('rounded-sm text-sm', {
+                'text-black font-normal':
+                  pathname.startsWith('/getting-started'),
+                'text-black/70 font-light':
+                  !pathname.startsWith('/getting-started'),
+              })}
             >
               Getting Started
             </Link>
             <Link
               href="/docs/components"
-              className="rounded-sm text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 focus-visible:ring-offset-2"
+              className={cx('rounded-sm text-sm', {
+                'text-black font-normal':
+                  pathname.startsWith('/docs/components'),
+                'text-black/70 font-light':
+                  !pathname.startsWith('/docs/components'),
+              })}
             >
               Components
             </Link>
@@ -46,6 +63,6 @@ export default function Navigation() {
         </nav>
         {/* ---- MOBILE NAV ---- */}
       </div>
-    </div>
+    </header>
   )
 }

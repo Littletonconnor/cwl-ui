@@ -1,8 +1,8 @@
 import { allGeneralDocuments } from 'contentlayer/generated'
 import { notFound } from 'next/navigation'
+import Balancer from 'react-wrap-balancer'
 
 import Markdown from '@/components/markdown'
-import PageToc from '@/components/page-toc'
 
 export async function generateStaticParams() {
   return allGeneralDocuments.map((post) => {
@@ -54,23 +54,14 @@ export default async function DocsPage({ params }: DocsPageProps) {
   }
 
   return (
-    <>
-      <div className="hidden shrink-0 pl-4 md:pl-8 lg:w-1/4 xl:block">
-        <div className="fixed left-full top-0 h-screen pt-16">
-          <div className="h-full overflow-y-auto">
-            <div className="my-12 pr-4">
-              <PageToc headings={post.toc} />
-            </div>
-          </div>
-        </div>
+    <div className="w-full py-6 lg:py-8">
+      <h1 className="text-4xl font-bold tracking-tight">{post.title}</h1>
+      <p className="mt-2 text-lg font-light text-gray-500">
+        <Balancer>{post.description}</Balancer>
+      </p>
+      <div className="prose prose-slate mt-12 max-w-3xl">
+        <Markdown doc={post} />
       </div>
-      <main className="my-12 w-full">
-        <div className="prose prose-slate md:ml-52">
-          <h1>{post.title}</h1>
-          <p className="lead">{post.description}</p>
-          <Markdown doc={post} />
-        </div>
-      </main>
-    </>
+    </div>
   )
 }

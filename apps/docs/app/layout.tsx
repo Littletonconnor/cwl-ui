@@ -18,6 +18,7 @@ export default function RootLayout({
 }): JSX.Element {
   return (
     <html lang="en">
+      <link rel="icon" href="/favicon.ico" />
       <body className={cx('h-full', fontSans.className)}>{children}</body>
     </html>
   )
