@@ -6,7 +6,7 @@ import { useMDXComponent } from 'next-contentlayer/hooks'
 import Anatomy from '@/components/anatomy'
 // import Callout from '@/components/docs/callout'
 // import ComponentExample from '@/components/docs/component-example'
-import ComponentSource from '@/components/component-source'
+import ComponentSource from '@/components/docs/component-source'
 import { cx } from '@/lib/cva.config'
 
 type MarkdownProps = {
