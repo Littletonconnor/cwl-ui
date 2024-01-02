@@ -45,7 +45,7 @@ export default function DocsLayout({ params, children }: DocsLayoutProps) {
     <div className="relative flex min-h-screen w-full flex-col">
       <Navigation />
       <main className="container mx-auto flex-1 items-start px-8 pt-14 md:grid md:grid-cols-[220px_minmax(0,1fr)] md:gap-6 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-10">
-        <aside className="hidden w-full shrink-0 md:sticky md:block">
+        <aside className="top-14 hidden w-full shrink-0 md:sticky md:block">
           <nav className="h-full overflow-y-auto py-6 lg:py-8" tabIndex={-1}>
             <div className="mb-4">
               <h4 className="px-2 py-1 text-sm font-semibold">
