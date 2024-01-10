@@ -2,7 +2,7 @@
   "name": "cwl-ui",
   "scripts": {
     "build": "turbo build",
-    "build-registry": "turbo build-registry",
+    "build:registry": "turbo build:registry",
     "dev": "turbo dev",
     "lint": "turbo lint",
     "lint:fix": "turbo lint:fix",

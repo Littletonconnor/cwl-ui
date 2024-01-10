@@ -2,7 +2,7 @@
   "$schema": "https://turbo.build/schema.json",
   "globalDependencies": ["**/.env.*local"],
   "pipeline": {
-    "build-registry": {
+    "build:registry": {
       "cache": false
     },
     "build": {
