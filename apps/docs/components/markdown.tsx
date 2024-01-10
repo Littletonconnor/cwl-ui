@@ -5,9 +5,10 @@ import { useMDXComponent } from 'next-contentlayer/hooks'
 
 import Anatomy from '@/components/anatomy'
 // import Callout from '@/components/docs/callout'
-// import ComponentExample from '@/components/docs/component-example'
 import ComponentSource from '@/components/docs/component-source'
 import { cx } from '@/lib/cva.config'
+
+import ComponentExample from './component-example'
 
 type MarkdownProps = {
   doc: DocumentTypes
@@ -21,7 +22,7 @@ export default function Markdown(props: MarkdownProps) {
       <MDXComponent
         components={{
           ComponentSource,
-          //   ComponentExample,
+          ComponentExample,
           //   Callout,
           // Heading,
           Anatomy,

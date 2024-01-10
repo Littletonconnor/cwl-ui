@@ -1,9 +1,9 @@
 import { Tab, TabList, TabPanel, Tabs } from 'cwl-ui'
 
-export default function Default() {
+export default function Disabled() {
   return (
-    <Tabs>
-      <TabList aria-label="An example demonstrating how to use Tabs">
+    <Tabs isDisabled>
+      <TabList aria-label="An example demonstrating how to use disabled Tabs">
         <Tab id="1">Tab 1</Tab>
         <Tab id="2">Tab 2</Tab>
         <Tab id="3">Tab 3</Tab>

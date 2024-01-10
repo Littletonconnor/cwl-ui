@@ -32,4 +32,30 @@ export const Index: ComponentRegistry = {
       file: "registry/breadcrumbs/icon.tsx"
     },
   },
+  "tabs": {
+    "default": {
+      name: "tabs-default",
+      story: "default",
+      component: React.lazy(() => import("@/registry/tabs/default")),
+      file: "registry/tabs/default.tsx"
+    },
+    "disabled-keys": {
+      name: "tabs-disabled-keys",
+      story: "disabled-keys",
+      component: React.lazy(() => import("@/registry/tabs/disabled-keys")),
+      file: "registry/tabs/disabled-keys.tsx"
+    },
+    "disabled": {
+      name: "tabs-disabled",
+      story: "disabled",
+      component: React.lazy(() => import("@/registry/tabs/disabled")),
+      file: "registry/tabs/disabled.tsx"
+    },
+    "vertical": {
+      name: "tabs-vertical",
+      story: "vertical",
+      component: React.lazy(() => import("@/registry/tabs/vertical")),
+      file: "registry/tabs/vertical.tsx"
+    },
+  },
 };

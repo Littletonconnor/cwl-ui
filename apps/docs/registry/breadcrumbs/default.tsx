@@ -4,10 +4,10 @@ export default function Default() {
   return (
     <Breadcrumbs className="text-lg">
       <BreadcrumbItem className="after:content-['›'] after:px-[5px] after:text-slate-400">
-        <a href="#">Home</a>
+        Home
       </BreadcrumbItem>
       <BreadcrumbItem className="after:content-['›'] after:px-[5px] after:text-slate-400">
-        <a href="#">React Aria</a>
+        React Aria
       </BreadcrumbItem>
       <BreadcrumbItem>useBreadcrumbs</BreadcrumbItem>
     </Breadcrumbs>

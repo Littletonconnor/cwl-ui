@@ -1,9 +1,9 @@
 import { Tab, TabList, TabPanel, Tabs } from 'cwl-ui'
 
-export default function Default() {
+export default function Vertical() {
   return (
-    <Tabs>
-      <TabList aria-label="An example demonstrating how to use Tabs">
+    <Tabs orientation="vertical">
+      <TabList aria-label="An example demonstrating how to use vertical tabs">
         <Tab id="1">Tab 1</Tab>
         <Tab id="2">Tab 2</Tab>
         <Tab id="3">Tab 3</Tab>
