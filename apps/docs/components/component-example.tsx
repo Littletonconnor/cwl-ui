@@ -1,9 +1,15 @@
+'use client'
+
 import * as React from 'react'
 
+import { Tab, TabList, Tabs } from 'cwl-ui/src/tabs'
+import { TabPanel } from 'react-aria-components'
+
 import { Index } from '@/__registry__'
+import { cx } from '@/lib/cva.config'
 
 interface ComponentExampleProps extends React.HTMLAttributes<HTMLDivElement> {
-  align?: 'left' | 'center' | 'right'
+  align?: 'start' | 'center' | 'end'
   name: string
   story: string
 }
@@ -43,5 +49,39 @@ export default function ComponentExample({
 
     return <Component />
   }, [name, story])
-  return <div></div>
+
+  return (
+    <div>
+      <Tabs>
+        <TabList aria-label="Preview and Code Tabs">
+          <Tab id="example">Example</Tab>
+          <Tab id="code">Code</Tab>
+        </TabList>
+        <TabPanel id="example">
+          <div className="not-prose overflow-x-auto rounded-md border">
+            <div
+              className={cx(
+                'flex min-h-96 min-w-[max-content] justify-center p-10',
+                {
+                  'items-center': align === 'center',
+                  'items-start': align === 'start',
+                  'items-end': align === 'end',
+                },
+              )}
+            >
+              <React.Suspense fallback={<p>Loading...</p>}>
+                {Story}
+              </React.Suspense>
+            </div>
+          </div>
+        </TabPanel>
+        <TabPanel id="code">
+          <div className="[&_pre]:mt-0">
+            {/* TODO COPY TO CLIPBOARD BUTTON */}
+            {Code}
+          </div>
+        </TabPanel>
+      </Tabs>
+    </div>
+  )
 }
