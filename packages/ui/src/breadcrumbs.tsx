@@ -1,51 +1,56 @@
-'use client'
-
 import * as React from 'react'
 
-import {
-  Breadcrumb as BaseBreadcrumb,
-  Breadcrumbs as BaseBreadcrumbs,
-  Link,
-  type BreadcrumbProps,
-  type BreadcrumbsProps,
-} from 'react-aria-components'
+import * as ReactAria from 'react-aria-components'
 
 import { cx } from '@/lib/cva.config'
 
-const Breadcrumbs = <T extends object>({
+export const Breadcrumbs = <T extends object>({
   className,
   ...props
-}: BreadcrumbsProps<T>) => {
+}: ReactAria.BreadcrumbsProps<T>) => {
   return (
-    <BaseBreadcrumbs
+    <ReactAria.Breadcrumbs
       className={cx('flex flex-wrap gap-1', className)}
       {...props}
     />
   )
 }
 
-export interface BreadcrumbItemProps extends BreadcrumbProps {
+export interface BreadcrumbItemProps extends ReactAria.BreadcrumbProps {
   separator?: React.ReactNode
 }
 
-const BreadcrumbItem = ({
+export const BreadcrumbItem = ({
   separator,
   children,
   ...props
 }: BreadcrumbItemProps) => {
   return (
-    <BaseBreadcrumb className="flex items-center gap-1" {...props}>
-      <Link
-        className={cx(
-          'text-slate-500 hover:underline',
-          'current:text-black current:hover:no-underline',
-        )}
-      >
-        {children}
-      </Link>
-      {separator ?? null}
-    </BaseBreadcrumb>
+    <ReactAria.Breadcrumb className="flex items-center gap-1" {...props}>
+      {children}
+      {separator ? (
+        <div aria-hidden="true" className="text-slate-400">
+          {separator}
+        </div>
+      ) : null}
+    </ReactAria.Breadcrumb>
   )
 }
 
-export { Breadcrumbs as Breadcrumbs, BreadcrumbItem as BreadcrumbItem }
+export const BreadcrumbLink = ({
+  children,
+  className,
+  ...props
+}: ReactAria.LinkProps) => {
+  return (
+    <ReactAria.Link
+      className={cx(
+        'text-slate-500 hover:underline current:text-black current:hover:no-underline',
+        className,
+      )}
+      {...props}
+    >
+      {children}
+    </ReactAria.Link>
+  )
+}

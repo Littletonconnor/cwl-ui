@@ -1,4 +1,4 @@
-import { BreadcrumbItem, Breadcrumbs } from 'cwl-ui'
+import { BreadcrumbItem, BreadcrumbLink, Breadcrumbs } from 'cwl-ui'
 import { ChevronRight } from 'lucide-react'
 
 export default function Icons() {
@@ -11,7 +11,7 @@ export default function Icons() {
           </div>
         }
       >
-        <a href="#">Home</a>
+        <BreadcrumbLink href="/">Home</BreadcrumbLink>
       </BreadcrumbItem>
       <BreadcrumbItem
         separator={
@@ -20,9 +20,9 @@ export default function Icons() {
           </div>
         }
       >
-        <a href="#">React Aria</a>
+        <BreadcrumbLink href="/">Account</BreadcrumbLink>
       </BreadcrumbItem>
-      <BreadcrumbItem>useBreadcrumbs</BreadcrumbItem>
+      <BreadcrumbLink href="/">Settings</BreadcrumbLink>
     </Breadcrumbs>
   )
 }

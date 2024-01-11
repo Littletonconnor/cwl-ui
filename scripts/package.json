@@ -4,7 +4,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build:registry": "ts-node src/build-registry.ts"
+    "build:registry": "npx tsx src/build-registry.ts"
   },
   "dependencies": {
     "find-up": "6.3.0",
@@ -16,8 +16,7 @@
     "@types/fs-extra": "11.0.1",
     "@types/node": "18.16.19",
     "@types/prettier": "2.7.3",
-    "ts-node": "10.9.1",
-    "typescript": "5.1.6",
-    "ts-config": "workspace:*"
+    "ts-config": "workspace:*",
+    "typescript": "5.1.6"
   }
 }
