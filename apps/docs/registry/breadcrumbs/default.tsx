@@ -9,7 +9,7 @@ export default function Default() {
       <BreadcrumbItem className="after:content-['›'] after:px-[5px] after:text-slate-400">
         <BreadcrumbLink href="/">Account</BreadcrumbLink>
       </BreadcrumbItem>
-      <BreadcrumbItem className="after:content-['›'] after:px-[5px] after:text-slate-400">
+      <BreadcrumbItem>
         <BreadcrumbLink href="/">Settings</BreadcrumbLink>
       </BreadcrumbItem>
     </Breadcrumbs>

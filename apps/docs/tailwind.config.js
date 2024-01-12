@@ -13,60 +13,51 @@ module.exports = {
   ],
   theme: {
     extend: {
-      typography: (_) => ({
-        DEFAULT: {
-          css: {
-            // 'code::before': {
-            //   content: 'none',
-            // },
-            // 'code::after': {
-            //   content: 'none',
-            // },
-            // 'p:not(pre)': {
-            //   code: {
-            //     color: theme('colors.slate.800'),
-            //     fontWeight: 'normal',
-            //     backgroundColor: theme('colors.slate.100'),
-            //     paddingTop: '2px',
-            //     paddingRight: theme('spacing.1'),
-            //     paddingBottom: '2px',
-            //     paddingLeft: theme('spacing.1'),
-            //     borderRadius: theme('spacing.1'),
-            //     letterSpacing: theme('letterSpacing.wide'),
-            //   },
-            //   'strong code': {
-            //     fontWeight: 'bolder',
-            //   },
-            // },
-            // 'li:not(pre)': {
-            //   code: {
-            //     color: theme('colors.slate.800'),
-            //     fontWeight: 'normal',
-            //     backgroundColor: theme('colors.slate.100'),
-            //     paddingTop: '2px',
-            //     paddingRight: theme('spacing.1'),
-            //     paddingBottom: '2px',
-            //     paddingLeft: theme('spacing.1'),
-            //     borderRadius: theme('spacing.1'),
-            //     letterSpacing: theme('letterSpacing.wide'),
-            //   },
-            //   'strong code': {
-            //     fontWeight: 'bolder',
-            //   },
-            // },
-          },
+      colors: {
+        border: 'hsl(var(--border))',
+        input: 'hsl(var(--input))',
+        ring: 'hsl(var(--ring))',
+        background: 'hsl(var(--background))',
+        foreground: 'hsl(var(--foreground))',
+        primary: {
+          DEFAULT: 'hsl(var(--primary))',
+          foreground: 'hsl(var(--primary-foreground))',
         },
-        invert: {
-          css: {
-            // 'p:not(pre)': {
-            //   code: {
-            //     color: theme('colors.white'),
-            //     backgroundColor: theme('colors.slate.800'),
-            //   },
-            // },
-          },
+        secondary: {
+          DEFAULT: 'hsl(var(--secondary))',
+          foreground: 'hsl(var(--secondary-foreground))',
         },
-      }),
+        secondary: {
+          DEFAULT: 'hsl(var(--secondary))',
+          foreground: 'hsl(var(--secondary-foreground))',
+        },
+        destructive: {
+          DEFAULT: 'hsl(var(--destructive) / <alpha-value>)',
+          foreground: 'hsl(var(--destructive-foreground) / <alpha-value>)',
+        },
+        muted: {
+          DEFAULT: 'hsl(var(--muted))',
+          foreground: 'hsl(var(--muted-foreground))',
+        },
+        accent: {
+          DEFAULT: 'hsl(var(--accent))',
+          foreground: 'hsl(var(--accent-foreground))',
+        },
+        popover: {
+          DEFAULT: 'hsl(var(--popover))',
+          foreground: 'hsl(var(--popover-foreground))',
+        },
+        card: {
+          DEFAULT: 'hsl(var(--card))',
+          foreground: 'hsl(var(--card-foreground))',
+        },
+      },
+      borderRadius: {
+        xl: `calc(var(--radius) + 4px)`,
+        lg: `var(--radius)`,
+        md: `calc(var(--radius) - 2px)`,
+        sm: 'calc(var(--radius) - 4px)',
+      },
     },
   },
   plugins: [require('@tailwindcss/typography')],

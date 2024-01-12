@@ -50,9 +50,9 @@ const Tab = ({ className, ...props }: TabProps) => {
   return (
     <BaseTab
       className={cx(
-        'relative shrink-0 cursor-pointer border-[length:var(--border-width)] border-transparent px-4 py-2 text-slate-500 outline-none transition-colors',
+        'relative shrink-0 cursor-pointer border-[length:var(--border-width)] border-transparent px-4 py-2 text-muted-foreground outline-none transition-colors',
         // Focus-visible
-        'focus-visible:ring-2 focus-visible:ring-slate-400',
+        'focus-visible:ring-2 focus-visible:text-ring',
         // Disabled
         'disabled:cursor-not-allowed disabled:opacity-40',
         // Horizontal
@@ -60,7 +60,7 @@ const Tab = ({ className, ...props }: TabProps) => {
         // Vertical
         'group-orientation-vertical:border-[width:var(--border-width)] group-orientation-vertical:left-[2px] group-orientation-vertical:inline-flex',
         // Selected
-        'selected:border-black selected:text-black',
+        'selected:border-black selected:text-primary',
         className,
       )}
       {...props}

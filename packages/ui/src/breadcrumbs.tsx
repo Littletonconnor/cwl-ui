@@ -29,7 +29,7 @@ export const BreadcrumbItem = ({
     <ReactAria.Breadcrumb className="flex items-center gap-1" {...props}>
       {children}
       {separator ? (
-        <div aria-hidden="true" className="text-slate-400">
+        <div aria-hidden="true" className="text-muted">
           {separator}
         </div>
       ) : null}
@@ -45,7 +45,7 @@ export const BreadcrumbLink = ({
   return (
     <ReactAria.Link
       className={cx(
-        'text-slate-500 hover:underline current:text-black current:hover:no-underline',
+        'text-destructive hover:underline current:text-primary current:hover:no-underline',
         className,
       )}
       {...props}

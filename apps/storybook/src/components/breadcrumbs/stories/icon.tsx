@@ -7,7 +7,7 @@ export default function Icons() {
       <BreadcrumbItem
         separator={
           <div aria-hidden="true" className="text-slate-400">
-            <ChevronRight size="1em" />
+            <ChevronRight size="0.8em" />
           </div>
         }
       >
@@ -16,13 +16,15 @@ export default function Icons() {
       <BreadcrumbItem
         separator={
           <div aria-hidden="true" className="text-slate-400">
-            <ChevronRight size="1em" />
+            <ChevronRight size="0.8em" />
           </div>
         }
       >
         <BreadcrumbLink href="/">Account</BreadcrumbLink>
       </BreadcrumbItem>
-      <BreadcrumbLink href="/">Settings</BreadcrumbLink>
+      <BreadcrumbItem>
+        <BreadcrumbLink href="/">Settings</BreadcrumbLink>
+      </BreadcrumbItem>
     </Breadcrumbs>
   )
 }
