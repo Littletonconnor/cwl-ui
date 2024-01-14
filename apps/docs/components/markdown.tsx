@@ -7,6 +7,7 @@ import Anatomy from '@/components/anatomy'
 import ComponentSource from '@/components/docs/component-source'
 import { cx } from '@/lib/cva.config'
 
+import ComponentCode from './component-code'
 import ComponentDemo from './component-demo'
 import ComponentExample from './component-example'
 
@@ -24,6 +25,7 @@ export default function Markdown(props: MarkdownProps) {
           ComponentSource,
           ComponentExample,
           ComponentDemo,
+          ComponentCode,
           Anatomy,
           code: ({
             className,
@@ -39,13 +41,15 @@ export default function Markdown(props: MarkdownProps) {
             React.HTMLAttributes<HTMLPreElement>,
             'dangerouslySetInnerHTML'
           >) => (
-            <pre
-              className={cx(
-                'border border-slate-200 overflow-hidden rounded-md',
-                className,
-              )}
-              {...props}
-            />
+            <div className="typography my-6">
+              <pre
+                className={cx(
+                  'flex max-w-full overflow-x-auto rounded-xl py-4 text-sm/6 ring-1 ring-inset ring-black/10',
+                  className,
+                )}
+                {...props}
+              />
+            </div>
           ),
           p: ({
             className,
@@ -54,6 +58,12 @@ export default function Markdown(props: MarkdownProps) {
             React.HTMLAttributes<HTMLParagraphElement>,
             'dangerouslySetInnerHTML'
           >) => <p className={cx('typography', className)} {...props} />,
+          span: ({
+            ...props
+          }: Omit<
+            React.HTMLAttributes<HTMLParagraphElement>,
+            'dangerouslySetInnerHTML'
+          >) => <span className="data-[line]:px-6" {...props} />,
           h2: ({
             className,
             ...props
@@ -63,6 +73,17 @@ export default function Markdown(props: MarkdownProps) {
           >) => (
             <div className="typography">
               <h2 className={cx(className)} {...props} />
+            </div>
+          ),
+          h3: ({
+            className,
+            ...props
+          }: Omit<
+            React.HTMLAttributes<HTMLHeadingElement>,
+            'dangerouslySetInnerHTML'
+          >) => (
+            <div className="typography">
+              <h3 className={cx(className)} {...props} />
             </div>
           ),
         }}
