@@ -1,9 +1,6 @@
-import Navigation from '@/components/navigation'
-
 export default function Page(): JSX.Element {
   return (
-    <main className="h-full pt-14">
-      <Navigation />
+    <main className="h-full">
       <div className="container mx-auto px-4 pb-8 pt-20">
         <section className="mx-auto max-w-5xl text-center">
           <h1 className="text-5xl font-bold">

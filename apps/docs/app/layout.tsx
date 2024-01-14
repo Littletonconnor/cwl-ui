@@ -1,5 +1,5 @@
 import { cx } from '@/lib/cva.config'
-import { fontSans } from '@/lib/fonts'
+import { fontInter } from '@/lib/fonts'
 
 import '../styles/globals.css'
 
@@ -17,9 +17,9 @@ export default function RootLayout({
   children: React.ReactNode
 }): JSX.Element {
   return (
-    <html lang="en">
+    <html className="antialiased" lang="en">
       <link rel="icon" href="/favicon.ico" />
-      <body className={cx('h-full', fontSans.className)}>{children}</body>
+      <body className={cx('h-full', fontInter.className)}>{children}</body>
     </html>
   )
 }

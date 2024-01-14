@@ -45,7 +45,7 @@ export const BreadcrumbLink = ({
   return (
     <ReactAria.Link
       className={cx(
-        'text-destructive hover:underline current:text-primary current:hover:no-underline',
+        'text-zinc-600 hover:underline current:text-zinc-950 current:hover:no-underline',
         className,
       )}
       {...props}

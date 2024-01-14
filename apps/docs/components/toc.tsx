@@ -5,11 +5,7 @@ import { useEffect, useState } from 'react'
 import { cx } from '@/lib/cva.config'
 import { type TocItemProps } from '@/types'
 
-export default function PageToc({
-  headings,
-}: {
-  headings?: Array<TocItemProps>
-}) {
+export default function Toc({ headings }: { headings?: Array<TocItemProps> }) {
   const activeHeading = useActiveHeading((headings || []).map((h) => h.slug))
 
   return (

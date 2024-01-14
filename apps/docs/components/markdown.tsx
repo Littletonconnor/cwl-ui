@@ -4,10 +4,10 @@ import { type DocumentTypes } from 'contentlayer/generated'
 import { useMDXComponent } from 'next-contentlayer/hooks'
 
 import Anatomy from '@/components/anatomy'
-// import Callout from '@/components/docs/callout'
 import ComponentSource from '@/components/docs/component-source'
 import { cx } from '@/lib/cva.config'
 
+import ComponentDemo from './component-demo'
 import ComponentExample from './component-example'
 
 type MarkdownProps = {
@@ -23,8 +23,7 @@ export default function Markdown(props: MarkdownProps) {
         components={{
           ComponentSource,
           ComponentExample,
-          //   Callout,
-          // Heading,
+          ComponentDemo,
           Anatomy,
           code: ({
             className,
@@ -54,12 +53,7 @@ export default function Markdown(props: MarkdownProps) {
           }: Omit<
             React.HTMLAttributes<HTMLParagraphElement>,
             'dangerouslySetInnerHTML'
-          >) => (
-            <p
-              className={cx('leading-7 [&:not(:first-child)]:mt-3', className)}
-              {...props}
-            />
-          ),
+          >) => <p className={cx('typography', className)} {...props} />,
           h2: ({
             className,
             ...props
@@ -67,13 +61,9 @@ export default function Markdown(props: MarkdownProps) {
             React.HTMLAttributes<HTMLHeadingElement>,
             'dangerouslySetInnerHTML'
           >) => (
-            <h2
-              className={cx(
-                'font-heading mt-12 scroll-m-20 pb-2 text-2xl font-semibold tracking-tight first:mt-0 mb-0',
-                className,
-              )}
-              {...props}
-            />
+            <div className="typography">
+              <h2 className={cx(className)} {...props} />
+            </div>
           ),
         }}
       />
