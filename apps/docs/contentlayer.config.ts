@@ -37,7 +37,8 @@ export const ComponentDocument = defineDocumentType(() => ({
   computedFields: {
     slug: {
       type: 'string',
-      resolve: (post) => `/docs/${post._raw.flattenedPath}`,
+      resolve: (post) =>
+        `/docs/${post._raw.flattenedPath}`.replace('/components', ''),
     },
     toc: {
       type: 'json',
@@ -48,7 +49,7 @@ export const ComponentDocument = defineDocumentType(() => ({
 
 export const GeneralDocument = defineDocumentType(() => ({
   name: 'GeneralDocument',
-  filePathPattern: 'getting-started/**/*.mdx',
+  filePathPattern: 'docs/**/*.mdx',
   contentType: 'mdx',
   fields: {
     title: {
@@ -67,7 +68,8 @@ export const GeneralDocument = defineDocumentType(() => ({
   computedFields: {
     slug: {
       type: 'string',
-      resolve: (post) => `/${post._raw.flattenedPath}`,
+      resolve: (post) =>
+        `/${post._raw.flattenedPath.replace('/components', '')}`,
     },
     toc: {
       type: 'json',
