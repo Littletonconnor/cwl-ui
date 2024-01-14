@@ -93,7 +93,13 @@ export function Sidebar() {
         <li>
           <Link
             href="/docs"
-            className="flex items-center gap-x-3 py-1.5 text-sm/6 font-medium text-zinc-950"
+            className={cx(
+              'flex items-center gap-x-3 py-1.5 text-sm/6 font-medium text-zinc-700 hover:text-zinc-950',
+              pathname === '/docs' && 'text-zinc-950',
+              {
+                'text-zinc-950': pathname === '/docs',
+              },
+            )}
           >
             <Icon source="home" />
             Getting started
@@ -106,9 +112,9 @@ export function Sidebar() {
               <li key={link.href}>
                 <Link
                   className={cx(
-                    'relative block pl-4 text-sm/6 font-medium text-zinc-950 hover:text-zinc-950',
+                    'relative block pl-4 text-sm/6 font-medium text-zinc-700 hover:text-zinc-950',
                     {
-                      'before:absolute before:inset-y-0 before:left-[-1.5px] before:w-[2px] before:rounded-full before:bg-zinc-950':
+                      'text-zinc-950 before:absolute before:inset-y-0 before:left-[-1.5px] before:w-[2px] before:rounded-full before:bg-zinc-950':
                         pathname === link.href,
                     },
                   )}
