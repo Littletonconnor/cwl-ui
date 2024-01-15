@@ -2,6 +2,7 @@ import { Badge } from 'cwl-ui'
 
 import { type Meta } from '@storybook/react'
 
+import ColorStory from './stories/colors'
 import DefaultStory from './stories/default'
 
 const meta: Meta<typeof Badge> = {
@@ -12,3 +13,4 @@ const meta: Meta<typeof Badge> = {
 export default meta
 
 export const Default = () => <DefaultStory />
+export const Color = () => <ColorStory />

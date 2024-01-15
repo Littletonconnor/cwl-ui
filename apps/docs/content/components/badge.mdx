@@ -4,7 +4,7 @@ description: Badges are useful for showing metadata or status information. They 
 isComponent: true
 ---
 
-<ComponentDemo name="breadcrumbs" story="default" />
+<ComponentDemo name="badge" story="default" />
 <ComponentSource src="../storybook/src/components/breadcrumbs/stories/default.tsx" />
 
 ## Component API
@@ -13,22 +13,14 @@ TODO
 
 ## Examples
 
-Separators are not included as part of the component. You can add them using CSS or the `separator` prop.
+### Badge Colors
 
-### CSS Separator
+Use the `color` prop to set the color of the badge.
 
-Use psuedo elements to add separators between each breadcrumb.
-
-<ComponentExample name="breadcrumbs" story="default" />
-
-### Separator Prop
-
-Set the `separator` prop to `true` to add a separator between each breadcrumb.
-
-<ComponentExample name="breadcrumbs" story="icon" />
+<ComponentExample name="badge" story="colors" />
 
 ## Installation
 
 To install, copy the code below and paste into your project.
 
-<ComponentSource src="../../packages/ui/src/breadcrumbs.tsx" />
+<ComponentSource src="../../packages/ui/src/badge.tsx" />

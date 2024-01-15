@@ -27,7 +27,7 @@ export async function generateMetadata({
   return {
     title: `${
       post.title.toUpperCase().slice(0, 1) + post.title.slice(1)
-    } | CWL UI Kit`,
+    } - CWL UI Kit`,
   }
 }
 

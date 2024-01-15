@@ -18,6 +18,20 @@ type ComponentRegistry = Record<
 >
 
 export const Index: ComponentRegistry = {
+  "badge": {
+    "colors": {
+      name: "badge-colors",
+      story: "colors",
+      component: React.lazy(() => import("@/registry/badge/colors")),
+      file: "registry/badge/colors.tsx"
+    },
+    "default": {
+      name: "badge-default",
+      story: "default",
+      component: React.lazy(() => import("@/registry/badge/default")),
+      file: "registry/badge/default.tsx"
+    },
+  },
   "breadcrumbs": {
     "default": {
       name: "breadcrumbs-default",

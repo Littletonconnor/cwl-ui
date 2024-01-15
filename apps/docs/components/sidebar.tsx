@@ -1,5 +1,6 @@
 'use client'
 
+import { Badge } from 'cwl-ui/src/badge'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
@@ -10,10 +11,12 @@ const componentLinks = [
   {
     title: 'Alert',
     href: '/docs/alert',
+    comingSoon: true,
   },
   {
     title: 'Avatar',
-    href: '/docs/alert',
+    href: '/docs/avatar',
+    comingSoon: true,
   },
   {
     title: 'Badge',
@@ -26,50 +29,62 @@ const componentLinks = [
   {
     title: 'Button',
     href: '/docs/button',
+    comingSoon: true,
   },
   {
     title: 'Checkbox',
     href: '/docs/checkbox',
+    comingSoon: true,
   },
   {
     title: 'Dialog',
     href: '/docs/dialog',
+    comingSoon: true,
   },
   {
     title: 'Dropdown',
     href: '/docs/dropdown',
+    comingSoon: true,
   },
   {
     title: 'Fieldset',
     href: '/docs/fieldset',
+    comingSoon: true,
   },
   {
     title: 'Input',
     href: '/docs/input',
+    comingSoon: true,
   },
   {
     title: 'Listbox',
     href: '/docs/listbox',
+    comingSoon: true,
   },
   {
     title: 'Pagination',
     href: '/docs/pagination',
+    comingSoon: true,
   },
   {
     title: 'Radio button',
     href: '/docs/radio-button',
+    comingSoon: true,
   },
   {
     title: 'Select',
     href: '/docs/select',
+    comingSoon: true,
   },
   {
     title: 'Switch',
     href: '/docs/switch',
+    comingSoon: true,
   },
   {
     title: 'Table',
     href: '/docs/table',
+    comingSoon: true,
   },
   {
     title: 'Tabs',
@@ -78,17 +93,19 @@ const componentLinks = [
   {
     title: 'Text',
     href: '/docs/text',
+    comingSoon: true,
   },
   {
     title: 'TextArea',
     href: '/docs/text-area',
+    comingSoon: true,
   },
 ]
 
 export function Sidebar() {
   const pathname = usePathname()
   return (
-    <nav className="sticky top-16 hidden max-h-svh w-48 shrink-0 overflow-y-auto pb-16 pt-12 lg:block">
+    <nav className="sticky top-16 hidden max-h-svh w-56 shrink-0 overflow-y-auto pb-16 pt-12 lg:block">
       <ul>
         <li>
           <Link
@@ -109,7 +126,7 @@ export function Sidebar() {
           <p className="text-sm/6 font-medium text-zinc-950">Components</p>
           <ul className="mt-4 space-y-3.5 border-l border-zinc-200">
             {componentLinks.map((link) => (
-              <li key={link.href}>
+              <li className="flex gap-2" key={link.href}>
                 <Link
                   className={cx(
                     'relative block pl-4 text-sm/6 font-medium text-zinc-700 hover:text-zinc-950',
@@ -122,6 +139,7 @@ export function Sidebar() {
                 >
                   {link.title}
                 </Link>
+                {link.comingSoon && <Badge color="zinc">Coming Soon</Badge>}
               </li>
             ))}
           </ul>
