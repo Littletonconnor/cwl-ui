@@ -17,7 +17,7 @@ const componentLinks = [
   },
   {
     title: 'Badge',
-    href: '/docs/alert',
+    href: '/docs/badge',
   },
   {
     title: 'Breadcrumbs',

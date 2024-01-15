@@ -1,0 +1,34 @@
+---
+title: Badge
+description: Badges are useful for showing metadata or status information. They can be used to show a count, indicate a status change, or mark an item that requires attention.
+isComponent: true
+---
+
+<ComponentDemo name="breadcrumbs" story="default" />
+<ComponentSource src="../storybook/src/components/breadcrumbs/stories/default.tsx" />
+
+## Component API
+
+TODO
+
+## Examples
+
+Separators are not included as part of the component. You can add them using CSS or the `separator` prop.
+
+### CSS Separator
+
+Use psuedo elements to add separators between each breadcrumb.
+
+<ComponentExample name="breadcrumbs" story="default" />
+
+### Separator Prop
+
+Set the `separator` prop to `true` to add a separator between each breadcrumb.
+
+<ComponentExample name="breadcrumbs" story="icon" />
+
+## Installation
+
+To install, copy the code below and paste into your project.
+
+<ComponentSource src="../../packages/ui/src/breadcrumbs.tsx" />
