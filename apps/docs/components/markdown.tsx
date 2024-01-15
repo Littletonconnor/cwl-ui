@@ -34,6 +34,50 @@ export default function Markdown(props: MarkdownProps) {
             React.HTMLAttributes<HTMLElement>,
             'dangerouslySetInnerHTML'
           >) => <code className={cx(className)} {...props} />,
+          table: ({
+            className,
+            children,
+            ...props
+          }: Omit<
+            React.HTMLAttributes<HTMLElement>,
+            'dangerouslySetInnerHTML'
+          >) => (
+            <div className="typography">
+              <table
+                className={cx(
+                  'w-full table-auto text-left whitespace-no-wrap',
+                  className,
+                )}
+                {...props}
+              >
+                <colgroup>
+                  <col style={{ width: '25%' }} />
+                  <col style={{ width: '25%' }} />
+                  <col style={{ width: '50%' }} />
+                </colgroup>
+                {children}
+              </table>
+            </div>
+          ),
+          th: ({
+            className,
+            ...props
+          }: Omit<
+            React.HTMLAttributes<HTMLTableHeaderCellElement>,
+            'dangerouslySetInnerHTML'
+          >) => (
+            <th
+              className={cx('pb-4 text-sm font-semibold', className)}
+              {...props}
+            />
+          ),
+          td: ({
+            className,
+            ...props
+          }: Omit<
+            React.HTMLAttributes<HTMLTableDataCellElement>,
+            'dangerouslySetInnerHTML'
+          >) => <td className={cx('py-1.5 pb-6 pt-3', className)} {...props} />,
           pre: ({
             className,
             ...props

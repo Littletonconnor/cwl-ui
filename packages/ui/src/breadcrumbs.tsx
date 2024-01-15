@@ -29,7 +29,7 @@ export const BreadcrumbItem = ({
     <ReactAria.Breadcrumb className="flex items-center gap-1" {...props}>
       {children}
       {separator ? (
-        <div aria-hidden="true" className="text-muted">
+        <div aria-hidden="true" className="text-zinc-700">
           {separator}
         </div>
       ) : null}
