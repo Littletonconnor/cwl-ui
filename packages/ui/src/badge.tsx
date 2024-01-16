@@ -1,8 +1,8 @@
 import { cx } from '@/lib/cva.config'
 
-const colors = {
+export const colors = {
   red: 'bg-red-500/15 text-red-700',
-  orange: 'bg-red-500/15 text-red-700',
+  orange: 'bg-orange-500/15 text-orange-700',
   amber: 'bg-amber-400/20 text-amber-700',
   yellow: 'bg-yellow-400/20 text-yellow-700',
   lime: 'bg-lime-500/20 text-lime-700',
@@ -10,7 +10,7 @@ const colors = {
   emerald: 'bg-emerald-500/15 text-emerald-700',
   teal: 'bg-teal-500/15 text-teal-700',
   cyan: 'bg-cyan-400/20 text-cyan-700',
-  sky: 'bg-amber-500/15 text-sky-700',
+  sky: 'bg-sky-500/15 text-sky-700',
   blue: 'bg-blue-500/15 text-blue-700',
   indigo: 'bg-indigo-500/15 text-indigo-700',
   violet: 'bg-violet-500/15 text-violet-700',

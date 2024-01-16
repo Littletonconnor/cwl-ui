@@ -5,33 +5,45 @@ ariaPattern: https://www.w3.org/WAI/ARIA/apg/patterns/tabs/
 isComponent: true
 ---
 
-## Anatomy
+<ComponentDemo name="tabs" story="default" />
+<ComponentSource src="../storybook/src/components/tabs/stories/default.tsx" />
 
-<Anatomy source="tabs" />
+## Component API
+
+| Prop         | Default     | Description                                                                  |
+| ------------ | ----------- | ---------------------------------------------------------------------------- |
+| aria-label   | `undefined` | A label for assisting assistive technologies.                                |
+| isDisabled   | `false`     | A prop that disables all Tabs at once.                                       |
+| disabledKeys | `undefined` | An array that disables only certain Tabs.                                    |
+| orientation  | `vertical`  | Either `vertical` or `horizontal` which determines how the tabs are stacked. |
 
 ## Examples
 
 ### Default
 
-<ComponentExample name="tabs" story="default" />
+<ComponentDemo name="tabs" story="default" />
+<ComponentSource src="../storybook/src/components/tabs/stories/default.tsx" />
 
 ### Vertical Tabs
 
 Set the orientation prop to `vertical` to display tabs vertically.
 
-<ComponentExample name="tabs" story="vertical" />
+<ComponentDemo name="tabs" story="vertical" />
+<ComponentSource src="../storybook/src/components/tabs/stories/vertical.tsx" />
 
 ### Disabled
 
 Disabled all Tabs by setting the isDisabled prop.
 
-<ComponentExample name="tabs" story="disabled" />
+<ComponentDemo name="tabs" story="disabled" />
+<ComponentSource src="../storybook/src/components/tabs/stories/disabled.tsx" />
 
 ### Disabled Items
 
 Disable items by setting passing the disabledKeys props.
 
-<ComponentExample name="tabs" story="disabled-keys" />
+<ComponentDemo name="tabs" story="disabled-keys" />
+<ComponentSource src="../storybook/src/components/tabs/stories/disabled-keys.tsx" />
 
 ## Installation
 

@@ -7,6 +7,7 @@ import Anatomy from '@/components/anatomy'
 import ComponentSource from '@/components/docs/component-source'
 import { cx } from '@/lib/cva.config'
 
+import ColorReference from './color-reference'
 import ComponentCode from './component-code'
 import ComponentDemo from './component-demo'
 import ComponentExample from './component-example'
@@ -22,6 +23,7 @@ export default function Markdown(props: MarkdownProps) {
     <div>
       <MDXComponent
         components={{
+          ColorReference,
           ComponentSource,
           ComponentExample,
           ComponentDemo,
