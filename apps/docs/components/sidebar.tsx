@@ -34,7 +34,6 @@ const componentLinks = [
   {
     title: 'Checkbox',
     href: '/docs/checkbox',
-    comingSoon: true,
   },
   {
     title: 'Dialog',

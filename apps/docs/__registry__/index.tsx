@@ -46,6 +46,32 @@ export const Index: ComponentRegistry = {
       file: "registry/breadcrumbs/icon.tsx"
     },
   },
+  "checkbox": {
+    "default": {
+      name: "checkbox-default",
+      story: "default",
+      component: React.lazy(() => import("@/registry/checkbox/default")),
+      file: "registry/checkbox/default.tsx"
+    },
+    "disabled": {
+      name: "checkbox-disabled",
+      story: "disabled",
+      component: React.lazy(() => import("@/registry/checkbox/disabled")),
+      file: "registry/checkbox/disabled.tsx"
+    },
+    "intermediate": {
+      name: "checkbox-intermediate",
+      story: "intermediate",
+      component: React.lazy(() => import("@/registry/checkbox/intermediate")),
+      file: "registry/checkbox/intermediate.tsx"
+    },
+    "invalid": {
+      name: "checkbox-invalid",
+      story: "invalid",
+      component: React.lazy(() => import("@/registry/checkbox/invalid")),
+      file: "registry/checkbox/invalid.tsx"
+    },
+  },
   "tabs": {
     "default": {
       name: "tabs-default",

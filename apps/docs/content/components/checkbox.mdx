@@ -1,0 +1,41 @@
+---
+title: Checkbox
+description: Checkboxes allow users to select multiple items from a list of individual items, or to mark one individual item as selected.
+isComponent: true
+---
+
+<ComponentDemo name="checkbox" story="default" />
+<ComponentSource src="../storybook/src/components/checkbox/stories/default.tsx" />
+
+## Component API
+
+| Prop           | Default | Description                                             |
+| -------------- | ------- | ------------------------------------------------------- |
+| isSelected     | false   | whether or not the checkbox has been selected           |
+| isDisabled     | false   | whether or not the checkbox is disabled                 |
+| isIntermediate | false   | whether or not the checkbox is in an intermediate state |
+
+See React Aria [Checkbox](https://react-spectrum.adobe.com/react-spectrum/Checkbox.html#checkbox) for more details.
+
+## Examples
+
+### Checkbox Disabled
+
+<ComponentDemo name="checkbox" story="disabled" />
+<ComponentSource src="../storybook/src/components/checkbox/stories/disabled.tsx" />
+
+### Checkbox Invalid
+
+<ComponentDemo name="checkbox" story="invalid" />
+<ComponentSource src="../storybook/src/components/checkbox/stories/invalid.tsx" />
+
+### Checkbox Intermediate
+
+<ComponentDemo name="checkbox" story="intermediate" />
+<ComponentSource src="../storybook/src/components/checkbox/stories/intermediate.tsx" />
+
+## Installation
+
+To install, copy the code below and paste into your project.
+
+<ComponentSource src="../../packages/ui/src/checkbox.tsx" />
