@@ -36,6 +36,10 @@ const componentLinks = [
     href: '/docs/checkbox',
   },
   {
+    title: 'CheckboxGroup',
+    href: '/docs/checkbox-group',
+  },
+  {
     title: 'Dialog',
     href: '/docs/dialog',
     comingSoon: true,

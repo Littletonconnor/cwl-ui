@@ -4,7 +4,7 @@ import { Check, Minus } from 'lucide-react'
 import * as ReactAria from 'react-aria-components'
 import { tv } from 'tailwind-variants'
 
-import { focusRing } from '../lib/utils'
+import { focusRing } from './lib/utils'
 
 const checkboxStyles = tv({
   base: 'flex gap-2 items-center group text-sm transition',

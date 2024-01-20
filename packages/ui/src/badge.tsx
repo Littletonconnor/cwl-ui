@@ -1,4 +1,4 @@
-import { cx } from '@/lib/cva.config'
+import { cx } from './lib/cva.config'
 
 export const colors = {
   red: 'bg-red-500/15 text-red-700',

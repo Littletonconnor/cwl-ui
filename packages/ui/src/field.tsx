@@ -1,7 +1,7 @@
 import * as ReactAria from 'react-aria-components'
 import { twMerge } from 'tailwind-merge'
 
-import { composeTailwindRenderProps } from '@/lib/utils'
+import { composeTailwindRenderProps } from './lib/utils'
 
 export const Label = (props: ReactAria.LabelProps) => {
   return (

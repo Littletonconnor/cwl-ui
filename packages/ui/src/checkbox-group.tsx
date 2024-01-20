@@ -1,12 +1,12 @@
 import * as ReactAria from 'react-aria-components'
 
-import { composeTailwindRenderProps } from '@/lib/utils'
-
 import { Description, ErrorMessage, Label } from './field'
+import { composeTailwindRenderProps } from './lib/utils'
 
 interface CheckboxGroupProps extends ReactAria.CheckboxGroupProps {
   label?: string
   children?: React.ReactNode
+  orientation?: 'vertical' | 'horizontal'
   description?: string
   errorMessage?: string | ((validation: ReactAria.ValidationResult) => string)
 }
@@ -15,13 +15,16 @@ export const CheckboxGroup = (props: CheckboxGroupProps) => {
   return (
     <ReactAria.CheckboxGroup
       {...props}
+      data-orientation={props.orientation ?? 'vertical'}
       className={composeTailwindRenderProps(
         props.className,
-        'flex flex-col gap-2',
+        'group flex flex-col gap-2',
       )}
     >
       <Label>{props.label}</Label>
-      {props.children}
+      <div className="flex flex-col gap-2 group-orientation-horizontal:flex-row">
+        {props.children}
+      </div>
       {props.description && <Description>{props.description}</Description>}
       <ErrorMessage>{props.errorMessage}</ErrorMessage>
     </ReactAria.CheckboxGroup>

@@ -72,6 +72,32 @@ export const Index: ComponentRegistry = {
       file: "registry/checkbox/invalid.tsx"
     },
   },
+  "checkbox-group": {
+    "default": {
+      name: "checkbox-group-default",
+      story: "default",
+      component: React.lazy(() => import("@/registry/checkbox-group/default")),
+      file: "registry/checkbox-group/default.tsx"
+    },
+    "disabled": {
+      name: "checkbox-group-disabled",
+      story: "disabled",
+      component: React.lazy(() => import("@/registry/checkbox-group/disabled")),
+      file: "registry/checkbox-group/disabled.tsx"
+    },
+    "horizontal": {
+      name: "checkbox-group-horizontal",
+      story: "horizontal",
+      component: React.lazy(() => import("@/registry/checkbox-group/horizontal")),
+      file: "registry/checkbox-group/horizontal.tsx"
+    },
+    "invalid": {
+      name: "checkbox-group-invalid",
+      story: "invalid",
+      component: React.lazy(() => import("@/registry/checkbox-group/invalid")),
+      file: "registry/checkbox-group/invalid.tsx"
+    },
+  },
   "tabs": {
     "default": {
       name: "tabs-default",

@@ -1,0 +1,43 @@
+---
+title: CheckboxGroup
+description: A CheckboxGroup Allows users to select one or more items from a list of choices.
+isComponent: true
+---
+
+<ComponentDemo name="checkbox-group" story="default" />
+<ComponentSource src="../storybook/src/components/checkbox-group/stories/default.tsx" />
+
+## Component API
+
+| Prop       | Default    | Description                                                           |
+| ---------- | ---------- | --------------------------------------------------------------------- |
+| horizontal | 'vertical' | determines the layout `flex-row` or `flex-col` of the checkbox items. |
+| isDisabled | false      | Can be applied on an item by item basis or on the group level.        |
+| isInvalid  | false      | Marks the group as invalid with `data-invalid`.                       |
+
+See React Aria [CheckboxGroup](https://react-spectrum.adobe.com/react-spectrum/CheckboxGroup.html) for more details.
+
+## Examples
+
+### Horizontal
+
+<ComponentDemo name="checkbox-group" story="horizontal" />
+<ComponentSource src="../storybook/src/components/checkbox-group/stories/horizontal.tsx" />
+
+### Invalid
+
+<ComponentDemo name="checkbox-group" story="invalid" />
+<ComponentSource src="../storybook/src/components/checkbox-group/stories/invalid.tsx" />
+
+### Disabled
+
+<ComponentDemo name="checkbox-group" story="disabled" />
+<ComponentSource src="../storybook/src/components/checkbox-group/stories/disabled.tsx" />
+
+- Disabled can be applied on the checkbox level, or on the group level to disable all checkboxes.
+
+### Installation
+
+To install, copy the code below and paste into your project.
+
+<ComponentSource src="../../packages/ui/src/checkbox-group.tsx" />
