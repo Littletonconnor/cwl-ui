@@ -9,6 +9,7 @@
     "types": "tsc --noEmit"
   },
   "dependencies": {
+    "clsx": "^2.1.0",
     "cva": "1.0.0-beta.1",
     "lucide-react": "^0.259.0",
     "react-aria-components": "1.0.1",
