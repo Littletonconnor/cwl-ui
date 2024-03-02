@@ -13,6 +13,7 @@ module.exports = {
     '.css$',
   ],
   importOrderBuiltinModulesToTop: true,
+  printWidth: 100,
   importOrderCaseInsensitive: true,
   importOrderParserPlugins: ['typescript', 'jsx', 'decorators-legacy'],
   importOrderMergeDuplicateImports: true,
