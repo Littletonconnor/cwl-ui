@@ -1,3 +1,4 @@
+import { clsx, type ClassValue } from 'clsx'
 import { composeRenderProps } from 'react-aria-components'
 import { twMerge } from 'tailwind-merge'
 import { tv } from 'tailwind-variants'
@@ -17,4 +18,13 @@ export function composeTailwindRenderProps<T>(
   tw: string,
 ): string | ((v: T) => string) {
   return composeRenderProps(className, (className) => twMerge(tw, className))
+}
+
+/**
+ * Prevents unnecessary Tailwind classes and merge classes to prevent class duplication.
+ * @param inputs - Any number of class names or class name arrays to merge.
+ * @returns A string of merged class names.
+ */
+export const cn = (...inputs: ClassValue[]) => {
+  return twMerge(clsx(...inputs))
 }

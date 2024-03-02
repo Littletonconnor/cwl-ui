@@ -1,14 +1,13 @@
 import * as ReactAria from 'react-aria-components'
-import { twMerge } from 'tailwind-merge'
 
-import { composeTailwindRenderProps } from './lib/utils'
+import { cn, composeTailwindRenderProps } from './lib/utils'
 
 export const Label = (props: ReactAria.LabelProps) => {
   return (
     <ReactAria.Label
       {...props}
-      className={twMerge(
-        'text-sm font-medium [--color:theme(colors.slate.500)] text-[--color] cursor-default w-fit',
+      className={cn(
+        'w-fit cursor-default text-sm font-medium text-[--color] [--color:theme(colors.slate.500)]',
         props.className,
       )}
     >
@@ -22,9 +21,7 @@ export const Description = (props: ReactAria.TextProps) => {
     <ReactAria.Text
       {...props}
       slot="description"
-      className={twMerge(
-        'text-sm [--color:theme(colors.slate.600)] text-[--color]',
-      )}
+      className={cn('text-sm text-[--color] [--color:theme(colors.slate.600)]')}
     >
       {props.children}
     </ReactAria.Text>
