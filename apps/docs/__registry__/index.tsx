@@ -98,6 +98,56 @@ export const Index: ComponentRegistry = {
       file: "registry/checkbox-group/invalid.tsx"
     },
   },
+  "table": {
+    "bleed": {
+      name: "table-bleed",
+      story: "bleed",
+      component: React.lazy(() => import("@/registry/table/bleed")),
+      file: "registry/table/bleed.tsx"
+    },
+    "default": {
+      name: "table-default",
+      story: "default",
+      component: React.lazy(() => import("@/registry/table/default")),
+      file: "registry/table/default.tsx"
+    },
+    "dense": {
+      name: "table-dense",
+      story: "dense",
+      component: React.lazy(() => import("@/registry/table/dense")),
+      file: "registry/table/dense.tsx"
+    },
+    "grid": {
+      name: "table-grid",
+      story: "grid",
+      component: React.lazy(() => import("@/registry/table/grid")),
+      file: "registry/table/grid.tsx"
+    },
+    "links": {
+      name: "table-links",
+      story: "links",
+      component: React.lazy(() => import("@/registry/table/links")),
+      file: "registry/table/links.tsx"
+    },
+    "overflow": {
+      name: "table-overflow",
+      story: "overflow",
+      component: React.lazy(() => import("@/registry/table/overflow")),
+      file: "registry/table/overflow.tsx"
+    },
+    "striped-links": {
+      name: "table-striped-links",
+      story: "striped-links",
+      component: React.lazy(() => import("@/registry/table/striped-links")),
+      file: "registry/table/striped-links.tsx"
+    },
+    "striped": {
+      name: "table-striped",
+      story: "striped",
+      component: React.lazy(() => import("@/registry/table/striped")),
+      file: "registry/table/striped.tsx"
+    },
+  },
   "tabs": {
     "default": {
       name: "tabs-default",

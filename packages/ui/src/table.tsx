@@ -70,8 +70,6 @@ interface TableRowProps extends React.ComponentPropsWithoutRef<'tr'> {
 export const TableRow = ({ children, href, target, title, className, ...props }: TableRowProps) => {
   const { striped } = useContext(TableContext)
 
-  // FIXME: there's a fair amount of complexity here to get things like focus states right.
-  // Since we're not using any external link libraries at the moment
   return (
     <TableRowContext.Provider value={{ href, title, target }}>
       <tr
@@ -79,7 +77,7 @@ export const TableRow = ({ children, href, target, title, className, ...props }:
         className={cn(
           className,
           href &&
-            'rounded-md has-[[data-row-link][data-focused]]:outline has-[[data-row-link][data-focused]]:outline-2 has-[[data-row-link][data-focused]]:-outline-offset-2 has-[[data-row-link][data-focused]]:outline-blue-500',
+            'relative rounded-md has-[[data-row-link]]:cursor-pointer has-[[data-row-link][data-focused]]:outline has-[[data-row-link][data-focused]]:outline-2 has-[[data-row-link][data-focused]]:-outline-offset-2 has-[[data-row-link][data-focused]]:outline-blue-500',
           striped && 'even:bg-zinc-950/[2.5%]',
           href && striped && 'hover:bg-zinc-950/5',
           href && !striped && 'hover:bg-zinc-950/[2.5%]',
@@ -128,7 +126,7 @@ export const TableCell = ({
       {...props}
       className={cn(
         className,
-        'relative px-4 tabular-nums first:pl-2 last:pr-2',
+        'px-4 tabular-nums first:pl-2 last:pr-2',
         !striped && 'border-b border-zinc-950/5',
         grid && 'border-l border-l-zinc-950/5 first:border-l-0',
         dense ? 'py-2.5' : 'py-4',

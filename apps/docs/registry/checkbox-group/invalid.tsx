@@ -7,7 +7,7 @@ export default function Invalid() {
   let isValid = checked.length === 1 && checked[0] === 'pizza'
 
   return (
-    <div className="min-w-64">
+    <div className='min-w-44'>
       <CheckboxGroup
         label="Foods"
         description={isValid ? "What's your favorite food?" : ''}

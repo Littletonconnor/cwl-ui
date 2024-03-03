@@ -87,7 +87,6 @@ const componentLinks = [
   {
     title: 'Table',
     href: '/docs/table',
-    comingSoon: true,
   },
   {
     title: 'Tabs',

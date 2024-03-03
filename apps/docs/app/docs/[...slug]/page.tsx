@@ -11,11 +11,7 @@ export async function generateStaticParams() {
   })
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string[] }
-}) {
+export async function generateMetadata({ params }: { params: { slug: string[] } }) {
   const post = allComponentDocuments.find((post) => {
     return post.slug.replace('/docs/', '') === params.slug.join('')
   })
@@ -25,9 +21,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${
-      post.title.toUpperCase().slice(0, 1) + post.title.slice(1)
-    } - CWL UI Kit`,
+    title: `${post.title.toUpperCase().slice(0, 1) + post.title.slice(1)} - CWL UI Kit`,
   }
 }
 

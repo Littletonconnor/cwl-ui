@@ -37,8 +37,7 @@ export const ComponentDocument = defineDocumentType(() => ({
   computedFields: {
     slug: {
       type: 'string',
-      resolve: (post) =>
-        `/docs/${post._raw.flattenedPath}`.replace('/components', ''),
+      resolve: (post) => `/docs/${post._raw.flattenedPath}`.replace('/components', ''),
     },
     toc: {
       type: 'json',
@@ -68,8 +67,7 @@ export const GeneralDocument = defineDocumentType(() => ({
   computedFields: {
     slug: {
       type: 'string',
-      resolve: (post) =>
-        `/${post._raw.flattenedPath.replace('/components', '')}`,
+      resolve: (post) => `/${post._raw.flattenedPath.replace('/components', '')}`,
     },
     toc: {
       type: 'json',
@@ -167,8 +165,7 @@ export default makeSource({
               return
             }
 
-            preElement.properties['__withMeta__'] =
-              node.children.at(0).tagName === 'div'
+            preElement.properties['__withMeta__'] = node.children.at(0).tagName === 'div'
             preElement.properties['__rawString__'] = node.__rawString__
 
             if (node.__src__) {

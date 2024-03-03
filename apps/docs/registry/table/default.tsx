@@ -1,8 +1,8 @@
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from 'cwl-ui'
 
-export default function Grid() {
+export default function Default() {
   return (
-    <Table grid>
+    <Table>
       <TableHead>
         <TableRow>
           <TableHeader>Name</TableHeader>

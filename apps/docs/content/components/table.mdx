@@ -1,0 +1,76 @@
+---
+title: Table
+description: A table displays data in a tabular format. It is used to organize information and make it easier to read and understand.
+isComponent: true
+---
+
+<ComponentDemo name="table" story="default" />
+<ComponentSource src="../storybook/src/components/table/stories/default.tsx" />
+
+## Component API
+
+| Prop    | Default | Description                                     |
+| ------- | ------- | ----------------------------------------------- |
+| bleed   | false   | Whether the table should bleed into the gutter. |
+| dense   | false   | Whether the table uses condensed spacing.       |
+| grid    | false   | Whether to display vertical grid lines          |
+| striped | false   | Whether to display striped rows                 |
+
+This is a custom table component that does not use react-aria-components like other components in this library.
+
+## Examples
+
+### Responsive Table
+
+Tables automatically overflow horizontally when the content is wider than the container.
+
+<ComponentDemo name="table" story="overflow" />
+<ComponentSource src="../storybook/src/components/table/stories/overflow.tsx" />
+
+### Full Width Table
+
+Use the `bleed` prop to make the table full width.
+
+<ComponentDemo name="table" story="bleed" />
+<ComponentSource src="../storybook/src/components/table/stories/bleed.tsx" />
+
+### Rows as links
+
+Use the `href` props to make the rows clickable.
+
+<ComponentDemo name="table" story="links" />
+<ComponentSource src="../storybook/src/components/table/stories/links.tsx" />
+
+### With condensed spacing
+
+Use the `dense` prop to make the table use condensed spacing.
+
+<ComponentDemo name="table" story="dense" />
+<ComponentSource src="../storybook/src/components/table/stories/dense.tsx" />
+
+### With grid lines
+
+Use the `grid` prop to make the table display vertical grid lines.
+
+<ComponentDemo name="table" story="grid" />
+<ComponentSource src="../storybook/src/components/table/stories/grid.tsx" />
+
+### With striped lines
+
+Use the `striped` prop to make the table display striped rows.
+
+<ComponentDemo name="table" story="striped" />
+<ComponentSource src="../storybook/src/components/table/stories/striped.tsx" />
+
+### With striped links
+
+Use the `striped` and the `href` prop in combination with one another.
+
+<ComponentDemo name="table" story="striped-links" />
+<ComponentSource src="../storybook/src/components/table/stories/striped-links.tsx" />
+
+### Installation
+
+To install, copy the code below and paste into your project.
+
+<ComponentSource src="../../packages/ui/src/table.tsx" />
