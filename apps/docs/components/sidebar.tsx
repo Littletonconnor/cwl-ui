@@ -7,6 +7,23 @@ import { usePathname } from 'next/navigation'
 import { Icon } from '@/components/icons/icons'
 import { cx } from '@/lib/cva.config'
 
+const foundationLinks = [
+  {
+    title: 'Color System',
+    href: '/docs/color-system',
+  },
+  {
+    title: 'Typography',
+    href: '/docs/typography',
+    comingSoon: true,
+  },
+  {
+    title: 'Iconography',
+    href: '/docs/iconography',
+    comingSoon: true,
+  },
+]
+
 const componentLinks = [
   {
     title: 'Alert',
@@ -123,6 +140,28 @@ export function Sidebar() {
             <Icon source="home" />
             Getting started
           </Link>
+        </li>
+        <li className="mt-6">
+          <p className="text-sm/6 font-medium text-zinc-950">Foundations</p>
+          <ul className="mt-4 space-y-3.5 border-l border-zinc-200">
+            {foundationLinks.map((link) => (
+              <li className="flex gap-2" key={link.href}>
+                <Link
+                  className={cx(
+                    'relative block pl-4 text-sm/6 font-medium text-zinc-700 hover:text-zinc-950',
+                    {
+                      'text-zinc-950 before:absolute before:inset-y-0 before:left-[-1.5px] before:w-[2px] before:rounded-full before:bg-zinc-950':
+                        pathname === link.href,
+                    },
+                  )}
+                  href={link.href}
+                >
+                  {link.title}
+                </Link>
+                {link.comingSoon && <Badge color="zinc">Coming Soon</Badge>}
+              </li>
+            ))}
+          </ul>
         </li>
         <li className="mt-6">
           <p className="text-sm/6 font-medium text-zinc-950">Components</p>

@@ -8,6 +8,7 @@ import ComponentSource from '@/components/docs/component-source'
 import { cx } from '@/lib/cva.config'
 
 import ColorReference from './color-reference'
+import { ColorPalette, ColorPaletteCoreColor, ColorPaletteThemeColor } from './colors'
 import ComponentCode from './component-code'
 import ComponentDemo from './component-demo'
 import ComponentExample from './component-example'
@@ -25,6 +26,9 @@ export default function Markdown(props: MarkdownProps) {
         components={{
           ColorReference,
           ComponentSource,
+          ColorPalette,
+          ColorPaletteCoreColor,
+          ColorPaletteThemeColor,
           ComponentExample,
           ComponentDemo,
           ComponentCode,
@@ -32,24 +36,17 @@ export default function Markdown(props: MarkdownProps) {
           code: ({
             className,
             ...props
-          }: Omit<
-            React.HTMLAttributes<HTMLElement>,
-            'dangerouslySetInnerHTML'
-          >) => <code className={cx(className)} {...props} />,
+          }: Omit<React.HTMLAttributes<HTMLElement>, 'dangerouslySetInnerHTML'>) => (
+            <code className={cx(className)} {...props} />
+          ),
           table: ({
             className,
             children,
             ...props
-          }: Omit<
-            React.HTMLAttributes<HTMLElement>,
-            'dangerouslySetInnerHTML'
-          >) => (
+          }: Omit<React.HTMLAttributes<HTMLElement>, 'dangerouslySetInnerHTML'>) => (
             <div className="typography">
               <table
-                className={cx(
-                  'w-full table-auto text-left whitespace-no-wrap',
-                  className,
-                )}
+                className={cx('w-full table-auto text-left whitespace-no-wrap', className)}
                 {...props}
               >
                 <colgroup>
@@ -64,29 +61,19 @@ export default function Markdown(props: MarkdownProps) {
           th: ({
             className,
             ...props
-          }: Omit<
-            React.HTMLAttributes<HTMLTableHeaderCellElement>,
-            'dangerouslySetInnerHTML'
-          >) => (
-            <th
-              className={cx('pb-4 text-sm font-semibold', className)}
-              {...props}
-            />
+          }: Omit<React.HTMLAttributes<HTMLTableHeaderCellElement>, 'dangerouslySetInnerHTML'>) => (
+            <th className={cx('pb-4 text-sm font-semibold', className)} {...props} />
           ),
           td: ({
             className,
             ...props
-          }: Omit<
-            React.HTMLAttributes<HTMLTableDataCellElement>,
-            'dangerouslySetInnerHTML'
-          >) => <td className={cx('py-1.5 pb-6 pt-3', className)} {...props} />,
+          }: Omit<React.HTMLAttributes<HTMLTableDataCellElement>, 'dangerouslySetInnerHTML'>) => (
+            <td className={cx('py-1.5 pb-6 pt-3', className)} {...props} />
+          ),
           pre: ({
             className,
             ...props
-          }: Omit<
-            React.HTMLAttributes<HTMLPreElement>,
-            'dangerouslySetInnerHTML'
-          >) => (
+          }: Omit<React.HTMLAttributes<HTMLPreElement>, 'dangerouslySetInnerHTML'>) => (
             <div className="typography my-6">
               <pre
                 className={cx(
@@ -100,23 +87,18 @@ export default function Markdown(props: MarkdownProps) {
           p: ({
             className,
             ...props
-          }: Omit<
-            React.HTMLAttributes<HTMLParagraphElement>,
-            'dangerouslySetInnerHTML'
-          >) => <p className={cx('typography', className)} {...props} />,
+          }: Omit<React.HTMLAttributes<HTMLParagraphElement>, 'dangerouslySetInnerHTML'>) => (
+            <p className={cx('typography', className)} {...props} />
+          ),
           span: ({
             ...props
-          }: Omit<
-            React.HTMLAttributes<HTMLParagraphElement>,
-            'dangerouslySetInnerHTML'
-          >) => <span className="data-[line]:px-6" {...props} />,
+          }: Omit<React.HTMLAttributes<HTMLParagraphElement>, 'dangerouslySetInnerHTML'>) => (
+            <span className="data-[line]:px-6" {...props} />
+          ),
           h2: ({
             className,
             ...props
-          }: Omit<
-            React.HTMLAttributes<HTMLHeadingElement>,
-            'dangerouslySetInnerHTML'
-          >) => (
+          }: Omit<React.HTMLAttributes<HTMLHeadingElement>, 'dangerouslySetInnerHTML'>) => (
             <div className="typography">
               <h2 className={cx(className)} {...props} />
             </div>
@@ -124,10 +106,7 @@ export default function Markdown(props: MarkdownProps) {
           h3: ({
             className,
             ...props
-          }: Omit<
-            React.HTMLAttributes<HTMLHeadingElement>,
-            'dangerouslySetInnerHTML'
-          >) => (
+          }: Omit<React.HTMLAttributes<HTMLHeadingElement>, 'dangerouslySetInnerHTML'>) => (
             <div className="typography">
               <h3 className={cx(className)} {...props} />
             </div>

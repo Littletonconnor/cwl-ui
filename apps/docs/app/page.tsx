@@ -10,9 +10,9 @@ export default function Page(): JSX.Element {
           </h1>
           <div className="mx-auto mt-8 max-w-3xl">
             <p className="text-lg text-zinc-600">
-              CWL UI is a collection of React components that have been built to
-              be highly composable with one another. It is built on top of
-              Tailwind CSS and React-Aria Components.
+              CWL UI is a collection of React components that have been built to be highly
+              composable with one another. It is built on top of Tailwind CSS and React-Aria
+              Components.
             </p>
           </div>
           <p className="mt-20 text-zinc-600">
@@ -41,48 +41,20 @@ export default function Page(): JSX.Element {
         <div className="mx-auto max-w-5xl text-center">
           <h2 className="text-4xl font-bold">10+ Components</h2>
           <div className="mt-12 grid grid-flow-dense grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
-            <div className="rounded-md border bg-white p-4 md:col-span-2">
-              Example 1
-            </div>
-            <div className="rounded-md border bg-white p-4 md:col-span-1">
-              Example 2
-            </div>
-            <div className="rounded-md border bg-white p-4 md:col-span-1">
-              Example 3
-            </div>
-            <div className="rounded-md border bg-white p-4 md:col-span-1">
-              Example 4
-            </div>
-            <div className="rounded-md border bg-white p-4 md:col-span-2">
-              Coming soon
-            </div>
-            <div className="rounded-md border bg-white p-4 md:col-span-1">
-              Coming soon
-            </div>
-            <div className="rounded-md border bg-white p-4 md:col-span-1">
-              Coming soon
-            </div>
-            <div className="rounded-md border bg-white p-4 md:col-span-1">
-              Coming soon
-            </div>
-            <div className="rounded-md border bg-white p-4 md:col-span-1">
-              Coming soon
-            </div>
-            <div className="rounded-md border bg-white p-4 md:col-span-1">
-              Coming soon
-            </div>
-            <div className="rounded-md border bg-white p-4 md:col-span-1">
-              Coming soon
-            </div>
-            <div className="rounded-md border bg-white p-4 md:col-span-1">
-              Coming soon
-            </div>
-            <div className="rounded-md border bg-white p-4 md:col-span-1">
-              Coming soon
-            </div>
-            <div className="rounded-md border bg-white p-4 md:col-span-1">
-              Coming soon
-            </div>
+            <div className="rounded-md border bg-white p-4 md:col-span-2">Example 1</div>
+            <div className="rounded-md border bg-white p-4 md:col-span-1">Example 2</div>
+            <div className="rounded-md border bg-white p-4 md:col-span-1">Example 3</div>
+            <div className="rounded-md border bg-white p-4 md:col-span-1">Example 4</div>
+            <div className="rounded-md border bg-white p-4 md:col-span-2">Coming soon</div>
+            <div className="rounded-md border bg-white p-4 md:col-span-1">Coming soon</div>
+            <div className="rounded-md border bg-white p-4 md:col-span-1">Coming soon</div>
+            <div className="rounded-md border bg-white p-4 md:col-span-1">Coming soon</div>
+            <div className="rounded-md border bg-white p-4 md:col-span-1">Coming soon</div>
+            <div className="rounded-md border bg-white p-4 md:col-span-1">Coming soon</div>
+            <div className="rounded-md border bg-white p-4 md:col-span-1">Coming soon</div>
+            <div className="rounded-md border bg-white p-4 md:col-span-1">Coming soon</div>
+            <div className="rounded-md border bg-white p-4 md:col-span-1">Coming soon</div>
+            <div className="rounded-md border bg-white p-4 md:col-span-1">Coming soon</div>
           </div>
         </div>
       </section>

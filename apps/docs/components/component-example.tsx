@@ -23,12 +23,8 @@ export default function ComponentExample({
   const [Code] = React.Children.toArray(children) as React.ReactElement[]
 
   const codeString = React.useMemo(() => {
-    if (
-      typeof Code?.props['data-rehype-pretty-code-fragment'] !== 'undefined'
-    ) {
-      const [codeToCopy] = React.Children.toArray(
-        Code.props.children,
-      ) as React.ReactElement[]
+    if (typeof Code?.props['data-rehype-pretty-code-fragment'] !== 'undefined') {
+      const [codeToCopy] = React.Children.toArray(Code.props.children) as React.ReactElement[]
       return codeToCopy?.props?.__rawString__ || null
     }
   }, [Code])
@@ -60,18 +56,13 @@ export default function ComponentExample({
         <TabPanel id="example">
           <div className="not-prose overflow-x-auto rounded-md border">
             <div
-              className={cx(
-                'flex min-h-96 min-w-[max-content] justify-center p-10',
-                {
-                  'items-center': align === 'center',
-                  'items-start': align === 'start',
-                  'items-end': align === 'end',
-                },
-              )}
+              className={cx('flex min-h-96 min-w-[max-content] justify-center p-10', {
+                'items-center': align === 'center',
+                'items-start': align === 'start',
+                'items-end': align === 'end',
+              })}
             >
-              <React.Suspense fallback={<p>Loading...</p>}>
-                {Story}
-              </React.Suspense>
+              <React.Suspense fallback={<p>Loading...</p>}>{Story}</React.Suspense>
             </div>
           </div>
         </TabPanel>

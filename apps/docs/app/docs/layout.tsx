@@ -30,7 +30,7 @@ export default function Layout({ children }: LayoutProps) {
           <div className="mx-auto flex max-w-xl items-start gap-x-12 lg:max-w-7xl">
             <Sidebar />
             <main className="min-w-0 flex-1 gap-x-12 pb-16 pt-8 lg:pt-12">
-              <div className="max-w-2xl">{children}</div>
+              <div className="prose max-w-2xl">{children}</div>
             </main>
           </div>
         </div>

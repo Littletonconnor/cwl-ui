@@ -1,0 +1,21 @@
+{
+  "name": "cwl-ui-colors",
+  "version": "0.1.0",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "lint": "eslint --ignore-path .gitignore '**/*.{js,jsx,cjs,mjs,ts,tsx}'",
+    "lint:fix": "eslint --ignore-path .gitignore --write '**/*.{js,jsx,cjs,mjs,ts,tsx}'",
+    "types": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/react": "18.0.27",
+    "eslint": "^8.37.0",
+    "eslint-config-custom": "workspace:*",
+    "ts-config": "workspace:*",
+    "typescript": "4.9.5"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  }
+}
