@@ -5,6 +5,9 @@ import tailwindTypography from '@tailwindcss/typography'
 
 import type { Config } from 'tailwindcss'
 
+// TODO: Implement tailwind plugin to prefix all classes with `cwl-` to avoid conflicts with other tailwind projects.
+// TODO: Implement tailwind plugin so you can start adding themes as well.
+
 const config: Config = {
   presets: [baseTailwindConfig],
   content: [
@@ -24,7 +27,7 @@ const config: Config = {
           ...palette.gray,
         },
         yellow: {
-          ...palette.gray,
+          ...palette.yellow,
         },
         green: {
           ...palette.green,

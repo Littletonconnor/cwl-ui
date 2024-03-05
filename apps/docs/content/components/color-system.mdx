@@ -122,6 +122,21 @@ All core colors can be found in cwl-ui-colors.
 If you would like to consume just the color palette, you can swap them with standard tailwind colors.
 
 ```ts
+export const palette = {
+  white,
+  blue,
+  gray,
+  green,
+  orange,
+  pink,
+  purple,
+  red,
+  yellow,
+  black,
+} as const
+```
+
+```ts
 import { palette } from 'cwl-ui-colors'
 
 module.exports = {
@@ -138,33 +153,37 @@ module.exports = {
         yellow: {
           ...palette.gray,
         },
-        green: {
-          ...palette.green,
-        },
-        blue: {
-          ...palette.blue,
-        },
-        purple: {
-          ...palette.purple,
-        },
-        orange: {
-          ...palette.orange,
-        },
-        red: {
-          ...palette.red,
-        },
-        pink: {
-          ...palette.pink,
-        },
-        black: {
-          ...palette.black,
-        },
+        // ... more colors
       },
     },
   },
 }
 ```
 
-## Theme Color Palette
+### Usage
 
-By default, cwl-ui-colors comes with two themes - light and dark. However, you can create as many additional themes as you need.
+```html
+<div class="bg-gray-500 text-white p-4">Gray 500</div>
+<div class="bg-yellow-500 text-white p-4">Yellow 500</div>
+<div class="bg-green-500 text-white p-4">Green 500</div>
+```
+
+### Color Scale
+
+cwl-ui-colors uses a 10-step color scale with a default color just like tailwind. This allows you to easily adjust the color of an element by changing the class name.
+
+```ts
+export type ColorScale = {
+  50: string
+  100: string
+  200: string
+  300: string
+  400: string
+  500: string
+  600: string
+  700: string
+  800: string
+  900: string
+  DEFAULT: string
+}
+```
