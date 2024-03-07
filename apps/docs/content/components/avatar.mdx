@@ -1,0 +1,65 @@
+---
+title: Avatar
+description: An avatar is a thumbnail representation of an entity, such as a user or an organization.
+isComponent: true
+---
+
+<ComponentDemo name="avatar" story="default" />
+<ComponentSource src="../storybook/src/components/avatar/stories/default.tsx" />
+
+## Component API
+
+| Prop         | Default   | Description                                                            |
+| ------------ | --------- | ---------------------------------------------------------------------- |
+| Initials     | undefined | The color of the badge.                                                |
+| src          | undefined | Represents the image source displayed in the Avatar.                   |
+| alt          | undefined | Represents the alternative text for the image displayed in the Avatar. |
+| className    | undefined | Represents the className of the Avatar.                                |
+| size         | sm        | Represents the size of the Avatar.                                     |
+| notification | undefined | An optional prop to apply a notification to the Avatar.                |
+| status       | undefined | An optional prop to apply a custom status to the Avatar.               |
+
+This is a custom Avatar component that does not use react-aria-components like other components in this library.
+
+## Examples
+
+### Sizes
+
+Pass a `size` prop to the Avatar to change the size of the Avatar.
+
+<ComponentDemo name="avatar" story="sizes" />
+<ComponentSource src="../storybook/src/components/avatar/stories/sizes.tsx" />
+
+### Notification Avatar
+
+Pass a `notification` prop to the Avatar to apply a notification.
+
+<ComponentDemo name="avatar" story="notification" />
+<ComponentSource src="../storybook/src/components/avatar/stories/notification.tsx" />
+
+### Status
+
+Pass a `status` prop to the Avatar to apply a custom status to the Avatar.
+
+<ComponentDemo name="avatar" story="status" />
+<ComponentSource src="../storybook/src/components/avatar/stories/status.tsx" />
+
+### Status and Notification
+
+If you want to apply both a status and a notification to the Avatar, you can pass both props.
+
+<ComponentDemo name="avatar" story="status-and-notification" />
+<ComponentSource src="../storybook/src/components/avatar/stories/status-and-notification.tsx" />
+
+### Custom Avatar
+
+If you need finer grained control on how you want to display the Avatar, you can pass children as props instead.
+
+<ComponentDemo name="avatar" story="custom" />
+<ComponentSource src="../storybook/src/components/avatar/stories/custom.tsx" />
+
+## Installation
+
+To install, copy the code below and paste into your project.
+
+<ComponentSource src="../../packages/ui/src/avatar.tsx" />

@@ -18,6 +18,44 @@ type ComponentRegistry = Record<
 >
 
 export const Index: ComponentRegistry = {
+  "avatar": {
+    "custom": {
+      name: "avatar-custom",
+      story: "custom",
+      component: React.lazy(() => import("@/registry/avatar/custom")),
+      file: "registry/avatar/custom.tsx"
+    },
+    "default": {
+      name: "avatar-default",
+      story: "default",
+      component: React.lazy(() => import("@/registry/avatar/default")),
+      file: "registry/avatar/default.tsx"
+    },
+    "notification": {
+      name: "avatar-notification",
+      story: "notification",
+      component: React.lazy(() => import("@/registry/avatar/notification")),
+      file: "registry/avatar/notification.tsx"
+    },
+    "sizes": {
+      name: "avatar-sizes",
+      story: "sizes",
+      component: React.lazy(() => import("@/registry/avatar/sizes")),
+      file: "registry/avatar/sizes.tsx"
+    },
+    "status-and-notification": {
+      name: "avatar-status-and-notification",
+      story: "status-and-notification",
+      component: React.lazy(() => import("@/registry/avatar/status-and-notification")),
+      file: "registry/avatar/status-and-notification.tsx"
+    },
+    "status": {
+      name: "avatar-status",
+      story: "status",
+      component: React.lazy(() => import("@/registry/avatar/status")),
+      file: "registry/avatar/status.tsx"
+    },
+  },
   "badge": {
     "colors": {
       name: "badge-colors",

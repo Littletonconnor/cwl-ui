@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { cn } from './lib/utils'
+import { cn, getInitials } from './lib/utils'
 
 type Variants = 'gray' | 'green' | 'yellow' | 'red'
 
@@ -24,7 +24,7 @@ interface AvatarProps extends React.HTMLAttributes<HTMLSpanElement> {
   alt?: string
 
   /**
-   * Represents the size of the Avatar.
+   * Represents the class name of the Avatar.
    */
   className?: string
 
@@ -45,7 +45,10 @@ interface AvatarProps extends React.HTMLAttributes<HTMLSpanElement> {
 }
 
 const AvatarRoot = React.forwardRef<HTMLSpanElement, AvatarProps>(
-  ({ initials, alt, className, size = 'sm', src, notification, status, ...props }, ref) => {
+  (
+    { children, initials, alt, className, size = 'sm', src, notification, status, ...props },
+    ref,
+  ) => {
     return (
       <span
         className={cn(className, 'relative inline-grid rounded-full', {
@@ -72,7 +75,7 @@ const AvatarRoot = React.forwardRef<HTMLSpanElement, AvatarProps>(
               textAnchor="middle"
               dy=".125em"
             >
-              {initials}
+              {getInitials(initials)}
             </text>
           </svg>
         )}
@@ -86,6 +89,7 @@ const AvatarRoot = React.forwardRef<HTMLSpanElement, AvatarProps>(
         )}
         {notification && <Notification status={notification} />}
         {status && <Status status={status} />}
+        {children}
       </span>
     )
   },
@@ -99,7 +103,7 @@ const Status = React.forwardRef<
     <span
       ref={ref}
       className={cn(
-        'absolute bottom-0 right-0 h-[--notification-size] w-[--notification-size] rounded-full ring-2 ring-white',
+        'absolute right-0 top-0 h-[--notification-size] w-[--notification-size] rounded-full ring-2 ring-white',
         {
           'bg-gray-500': status === 'gray',
           'bg-green-500': status === 'green',
@@ -114,7 +118,7 @@ const Status = React.forwardRef<
 const Notification = React.forwardRef<
   HTMLSpanElement,
   React.ComponentPropsWithoutRef<'span'> & Pick<AvatarProps, 'status'>
->(({ status }, ref) => {
+>(({ status, className }, ref) => {
   return (
     <span
       ref={ref}
@@ -126,6 +130,7 @@ const Notification = React.forwardRef<
           'bg-yellow-500': status === 'yellow',
           'bg-red-500': status === 'red',
         },
+        className,
       )}
     />
   )
