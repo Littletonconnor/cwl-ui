@@ -2,6 +2,7 @@ import { Avatar } from 'cwl-ui'
 
 import { type Meta } from '@storybook/react'
 
+import CustomStory from './stories/custom'
 import DefaultStory from './stories/default'
 import NotificationStory from './stories/notification'
 import SizesStory from './stories/sizes'
@@ -20,3 +21,4 @@ export const Notification = () => <NotificationStory />
 export const Sizes = () => <SizesStory />
 export const Status = () => <StatusStory />
 export const StatusAndNotification = () => <StatusAndNotificationStory />
+export const Custom = () => <CustomStory />
