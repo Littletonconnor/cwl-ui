@@ -28,3 +28,33 @@ export function composeTailwindRenderProps<T>(
 export const cn = (...inputs: ClassValue[]) => {
   return twMerge(clsx(...inputs))
 }
+
+/**
+ * Returns the initials of a name.
+ * - If the string is empty, it will return an empty string.
+ * - If the string is one character, it will return the first character.
+ * - If the name string is two characters, it will return the first two characters.
+ * - If the name is more than two characters, it will return the first and last characters.
+ *
+ * @param name - The name to derive the initials from.
+ * @returns The initials of the name.
+ */
+export const getInitials = (name: string) => {
+  const trimmedName = name.trim()
+
+  if (trimmedName.length === 0 || trimmedName.length === 1 || trimmedName.length === 2) {
+    return trimmedName
+  }
+
+  const nameArray = trimmedName.split(' ')
+  if (nameArray.length === 1) {
+    return nameArray[0]?.charAt(0).toUpperCase() ?? ''
+  } else if (nameArray.length > 1) {
+    const firstName = nameArray[0]?.charAt(0).toUpperCase() ?? ''
+    const lastName = nameArray[nameArray.length - 1]?.charAt(0).toUpperCase() ?? ''
+
+    return firstName + lastName
+  }
+
+  return trimmedName
+}
