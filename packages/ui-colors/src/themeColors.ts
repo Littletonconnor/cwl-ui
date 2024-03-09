@@ -32,6 +32,7 @@ export const themeColorsLight: ThemeColors = {
 
   destructive: {
     ...palette.red,
+    DEFAULT: palette.red[500],
   },
 }
 

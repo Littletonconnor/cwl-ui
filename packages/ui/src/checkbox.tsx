@@ -40,10 +40,8 @@ export const Checkbox = (props: ReactAria.CheckboxProps) => {
   return (
     <ReactAria.Checkbox
       {...props}
-      className={ReactAria.composeRenderProps(
-        props.className,
-        (className, renderProps) =>
-          checkboxStyles({ ...renderProps, className }),
+      className={ReactAria.composeRenderProps(props.className, (className, renderProps) =>
+        checkboxStyles({ ...renderProps, className }),
       )}
     >
       {({ isSelected, isIndeterminate, ...renderProps }) => {
