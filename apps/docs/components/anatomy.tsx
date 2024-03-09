@@ -79,15 +79,7 @@ function getSvgEl(source: string) {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <rect
-            x="101"
-            y="108"
-            width="500"
-            height="281"
-            rx="8"
-            fill="#D9D9D9"
-            fillOpacity="0.3"
-          />
+          <rect x="101" y="108" width="500" height="281" rx="8" fill="#D9D9D9" fillOpacity="0.3" />
           <circle
             cx="86"
             cy="250"
@@ -155,7 +147,5 @@ function getSvgEl(source: string) {
 // TODO: convert to svg sprite.
 export default function Anatomy({ source }: AnatomyProps) {
   const SvgEl = getSvgEl(source)
-  return (
-    <div className="h-full max-h-[400px] w-full max-w-[600px]">{SvgEl}</div>
-  )
+  return <div className="h-full max-h-[400px] w-full max-w-[600px]">{SvgEl}</div>
 }

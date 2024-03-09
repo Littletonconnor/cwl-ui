@@ -11,9 +11,7 @@ export default function Toc({ headings }: { headings?: Array<TocItemProps> }) {
   return (
     <nav id="page-navigation" tabIndex={-1}>
       <div className="mb-3">
-        <span className="text-base font-semibold text-slate-900">
-          On This Page
-        </span>
+        <span className="text-base font-semibold text-slate-900">On This Page</span>
       </div>
       <ul>
         {(headings || []).map((h, idx) => (
@@ -23,9 +21,7 @@ export default function Toc({ headings }: { headings?: Array<TocItemProps> }) {
               className={cx(
                 'block rounded-sm py-1 text-sm no-underline transition',
                 'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 focus-visible:ring-offset-2',
-                h.slug === activeHeading
-                  ? 'text-slate-900'
-                  : 'text-slate-600 hover:text-slate-900',
+                h.slug === activeHeading ? 'text-slate-900' : 'text-slate-600 hover:text-slate-900',
               )}
             >
               {h.content}

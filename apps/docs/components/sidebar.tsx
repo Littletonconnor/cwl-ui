@@ -33,7 +33,6 @@ const componentLinks = [
   {
     title: 'Avatar',
     href: '/docs/avatar',
-    comingSoon: true,
   },
   {
     title: 'Badge',
@@ -95,6 +94,10 @@ const componentLinks = [
     title: 'Select',
     href: '/docs/select',
     comingSoon: true,
+  },
+  {
+    title: 'Spinner',
+    href: '/docs/spinner',
   },
   {
     title: 'Switch',

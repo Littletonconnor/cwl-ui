@@ -1,2 +1,4 @@
 .turbo
 storybook-static/
+
+tailwind-bundle.css

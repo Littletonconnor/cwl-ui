@@ -136,6 +136,26 @@ export const Index: ComponentRegistry = {
       file: "registry/checkbox-group/invalid.tsx"
     },
   },
+  "spinner": {
+    "color": {
+      name: "spinner-color",
+      story: "color",
+      component: React.lazy(() => import("@/registry/spinner/color")),
+      file: "registry/spinner/color.tsx"
+    },
+    "default": {
+      name: "spinner-default",
+      story: "default",
+      component: React.lazy(() => import("@/registry/spinner/default")),
+      file: "registry/spinner/default.tsx"
+    },
+    "sizes": {
+      name: "spinner-sizes",
+      story: "sizes",
+      component: React.lazy(() => import("@/registry/spinner/sizes")),
+      file: "registry/spinner/sizes.tsx"
+    },
+  },
   "table": {
     "bleed": {
       name: "table-bleed",

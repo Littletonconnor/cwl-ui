@@ -1,4 +1,4 @@
-import { palette } from 'cwl-ui-colors'
+import { palette, themeColors } from 'cwl-ui-colors'
 import baseTailwindConfig from 'tailwind-config/tailwind.config'
 
 import tailwindTypography from '@tailwindcss/typography'
@@ -20,6 +20,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        ...themeColors.light,
         white: {
           ...palette.white,
         },

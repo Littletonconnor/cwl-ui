@@ -18,19 +18,14 @@ export function Header() {
           </div>
         </div>
         <div className="flex items-center gap-8">
-          <Link
-            className="text-sm/6 font-medium text-zinc-700 hover:text-zinc-950"
-            href="/docs"
-          >
+          <Link className="text-sm/6 font-medium text-zinc-700 hover:text-zinc-950" href="/docs">
             Docs
           </Link>
           <Icon source="moon" />
         </div>
       </div>
       <div className="mx-auto mt-5 flex max-w-xl lg:hidden">
-        <div className="w-full rounded-md border border-zinc-200 px-2 py-1">
-          Select
-        </div>
+        <div className="w-full rounded-md border border-zinc-200 px-2 py-1">Select</div>
       </div>
     </header>
   )

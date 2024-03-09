@@ -13,6 +13,7 @@ const config: StorybookConfig = {
     {
       name: '@storybook/addon-styling',
     },
+    '@storybook/addon-themes'
   ],
   typescript: {
     reactDocgen: false,
