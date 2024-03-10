@@ -136,6 +136,14 @@ export const Index: ComponentRegistry = {
       file: "registry/checkbox-group/invalid.tsx"
     },
   },
+  "progress": {
+    "default": {
+      name: "progress-default",
+      story: "default",
+      component: React.lazy(() => import("@/registry/progress/default")),
+      file: "registry/progress/default.tsx"
+    },
+  },
   "spinner": {
     "color": {
       name: "spinner-color",
@@ -230,6 +238,26 @@ export const Index: ComponentRegistry = {
       story: "vertical",
       component: React.lazy(() => import("@/registry/tabs/vertical")),
       file: "registry/tabs/vertical.tsx"
+    },
+  },
+  "label": {
+    "default": {
+      name: "label-default",
+      story: "default",
+      component: React.lazy(() => import("@/registry/label/default")),
+      file: "registry/label/default.tsx"
+    },
+    "disabled": {
+      name: "label-disabled",
+      story: "disabled",
+      component: React.lazy(() => import("@/registry/label/disabled")),
+      file: "registry/label/disabled.tsx"
+    },
+    "required": {
+      name: "label-required",
+      story: "required",
+      component: React.lazy(() => import("@/registry/label/required")),
+      file: "registry/label/required.tsx"
     },
   },
 };

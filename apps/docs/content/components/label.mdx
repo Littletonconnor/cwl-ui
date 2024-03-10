@@ -1,0 +1,36 @@
+---
+title: Label
+description: An accessible label linked to form controls
+isComponent: true
+---
+
+<ComponentDemo name="label" story="default" />
+<ComponentSource src="../storybook/src/components/label/stories/default.tsx" />
+
+## Component API
+
+| Prop           | Default | Description                                             |
+| -------------- | ------- | ------------------------------------------------------- |
+| disabled     | false   | whether or not the checkbox has been selected           |
+| htmlFor     | string   | Associated the label with a form control                 |
+| required | false   | whether or not to indicate if the label is required |
+| description | string   | Additional description text associated to the label |
+
+## Examples
+
+### Required
+
+<ComponentDemo name="label" story="required" />
+<ComponentSource src="../storybook/src/components/label/stories/required.tsx" />
+
+### Disabled
+
+<ComponentDemo name="label" story="disabled" />
+<ComponentSource src="../storybook/src/components/label/stories/disabled.tsx" />
+
+## Installation
+
+To install, copy the code below and paste into your project.
+
+<ComponentSource src="../../packages/ui/src/label.tsx" />
+

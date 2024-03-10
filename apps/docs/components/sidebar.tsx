@@ -76,6 +76,10 @@ const componentLinks = [
     comingSoon: true,
   },
   {
+    title: 'Label',
+    href: '/docs/label',
+  },
+  {
     title: 'Listbox',
     href: '/docs/listbox',
     comingSoon: true,
