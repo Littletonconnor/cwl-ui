@@ -30,11 +30,19 @@ export const Badge = ({ children, color = 'zinc', ...props }: BadgeProps) => {
     <span
       {...props}
       className={cx(
-        'inline-flex items-center gap-x-1.5 rounded-md px-1.5 py-0.5 text-sm/5 font-medium sm:text-xs/5',
+        'gap-x-1.5 font-medium inline-flex items-center rounded-md px-1.5 py-0.5 text-sm/5 font-medium sm:text-xs/5',
         colors[color],
       )}
     >
-      {children}
+      <span
+        {...props}
+        className={cx(
+          'inline-flex items-center gap-x-1.5 rounded-md px-1.5 py-0.5 text-sm/5 font-medium sm:text-xs/5',
+          colors[color],
+        )}
+      >
+        {children}
+      </span>
     </span>
   )
 }
