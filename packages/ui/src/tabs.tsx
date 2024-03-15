@@ -19,10 +19,7 @@ const Tabs = ({ className, ...props }: ReactAria.TabsProps) => {
   )
 }
 
-const TabList = <T extends object>({
-  className,
-  ...props
-}: ReactAria.TabListProps<T>) => {
+const TabList = <T extends object>({ className, ...props }: ReactAria.TabListProps<T>) => {
   return (
     <ReactAria.TabList
       className={cx(

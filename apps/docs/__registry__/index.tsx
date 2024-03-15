@@ -136,6 +136,26 @@ export const Index: ComponentRegistry = {
       file: "registry/checkbox-group/invalid.tsx"
     },
   },
+  "label": {
+    "default": {
+      name: "label-default",
+      story: "default",
+      component: React.lazy(() => import("@/registry/label/default")),
+      file: "registry/label/default.tsx"
+    },
+    "disabled": {
+      name: "label-disabled",
+      story: "disabled",
+      component: React.lazy(() => import("@/registry/label/disabled")),
+      file: "registry/label/disabled.tsx"
+    },
+    "required": {
+      name: "label-required",
+      story: "required",
+      component: React.lazy(() => import("@/registry/label/required")),
+      file: "registry/label/required.tsx"
+    },
+  },
   "progress": {
     "default": {
       name: "progress-default",
@@ -240,24 +260,24 @@ export const Index: ComponentRegistry = {
       file: "registry/tabs/vertical.tsx"
     },
   },
-  "label": {
+  "text": {
     "default": {
-      name: "label-default",
+      name: "text-default",
       story: "default",
-      component: React.lazy(() => import("@/registry/label/default")),
-      file: "registry/label/default.tsx"
+      component: React.lazy(() => import("@/registry/text/default")),
+      file: "registry/text/default.tsx"
     },
-    "disabled": {
-      name: "label-disabled",
-      story: "disabled",
-      component: React.lazy(() => import("@/registry/label/disabled")),
-      file: "registry/label/disabled.tsx"
+    "headings": {
+      name: "text-headings",
+      story: "headings",
+      component: React.lazy(() => import("@/registry/text/headings")),
+      file: "registry/text/headings.tsx"
     },
-    "required": {
-      name: "label-required",
-      story: "required",
-      component: React.lazy(() => import("@/registry/label/required")),
-      file: "registry/label/required.tsx"
+    "text": {
+      name: "text-text",
+      story: "text",
+      component: React.lazy(() => import("@/registry/text/text")),
+      file: "registry/text/text.tsx"
     },
   },
 };
