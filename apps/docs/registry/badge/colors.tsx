@@ -1,9 +1,10 @@
 import { Badge } from 'cwl-ui'
 
 const colors = [
+  { color: 'gray', text: 'Info' },
   { color: 'red', text: 'bug' },
-  { color: 'emerald', text: 'Documentation' },
-  { color: 'fuchsia', text: 'Help wanted' },
+  { color: 'green', text: 'Documentation' },
+  { color: 'purple', text: 'Help wanted' },
   { color: 'orange', text: 'In Progress' },
 ] as const
 
