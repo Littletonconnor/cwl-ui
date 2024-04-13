@@ -165,7 +165,7 @@ export function Sidebar() {
                 >
                   {link.title}
                 </Link>
-                {link.comingSoon && <Badge color="zinc">Coming Soon</Badge>}
+                {link.comingSoon && <Badge color="gray">Coming Soon</Badge>}
               </li>
             ))}
           </ul>
@@ -187,7 +187,7 @@ export function Sidebar() {
                 >
                   {link.title}
                 </Link>
-                {link.comingSoon && <Badge color="zinc">Coming Soon</Badge>}
+                {link.comingSoon && <Badge color="gray">Coming Soon</Badge>}
               </li>
             ))}
           </ul>

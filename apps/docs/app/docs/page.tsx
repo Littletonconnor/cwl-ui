@@ -9,11 +9,7 @@ export async function generateMetadata() {
   }
 }
 
-interface LayoutProps {
-  children: React.ReactNode
-}
-
-export default function DocsPage({ children }: LayoutProps) {
+export default function DocsPage() {
   const post = allGeneralDocuments.find((post) => {
     return post.slug === '/docs/getting-started'
   })

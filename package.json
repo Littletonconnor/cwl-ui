@@ -1,7 +1,7 @@
 {
   "name": "cwl-ui",
   "scripts": {
-    "build": "turbo build",
+    "build": "pnpm i && turbo build",
     "build:registry": "turbo build:registry",
     "dev": "turbo dev",
     "lint": "turbo lint",
