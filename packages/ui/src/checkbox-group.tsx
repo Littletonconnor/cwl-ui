@@ -16,13 +16,10 @@ export const CheckboxGroup = (props: CheckboxGroupProps) => {
     <ReactAria.CheckboxGroup
       {...props}
       data-orientation={props.orientation ?? 'vertical'}
-      className={composeTailwindRenderProps(
-        props.className,
-        'group flex flex-col gap-2',
-      )}
+      className={composeTailwindRenderProps(props.className, 'group flex flex-col gap-2')}
     >
       <Label>{props.label}</Label>
-      <div className="flex flex-col gap-2 group-orientation-horizontal:flex-row">
+      <div className="group-orientation-horizontal:flex-row flex flex-col gap-2">
         {props.children}
       </div>
       {props.description && <Description>{props.description}</Description>}

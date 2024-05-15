@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function Page(): JSX.Element {
   return (
     <main className="h-full">
@@ -41,20 +43,51 @@ export default function Page(): JSX.Element {
         <div className="mx-auto max-w-5xl text-center">
           <h2 className="text-4xl font-bold">10+ Components</h2>
           <div className="mt-12 grid grid-flow-dense grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
-            <div className="rounded-md border bg-white p-4 md:col-span-2">Example 1</div>
-            <div className="rounded-md border bg-white p-4 md:col-span-1">Example 2</div>
-            <div className="rounded-md border bg-white p-4 md:col-span-1">Example 3</div>
-            <div className="rounded-md border bg-white p-4 md:col-span-1">Example 4</div>
-            <div className="rounded-md border bg-white p-4 md:col-span-2">Coming soon</div>
-            <div className="rounded-md border bg-white p-4 md:col-span-1">Coming soon</div>
-            <div className="rounded-md border bg-white p-4 md:col-span-1">Coming soon</div>
-            <div className="rounded-md border bg-white p-4 md:col-span-1">Coming soon</div>
-            <div className="rounded-md border bg-white p-4 md:col-span-1">Coming soon</div>
-            <div className="rounded-md border bg-white p-4 md:col-span-1">Coming soon</div>
-            <div className="rounded-md border bg-white p-4 md:col-span-1">Coming soon</div>
-            <div className="rounded-md border bg-white p-4 md:col-span-1">Coming soon</div>
-            <div className="rounded-md border bg-white p-4 md:col-span-1">Coming soon</div>
-            <div className="rounded-md border bg-white p-4 md:col-span-1">Coming soon</div>
+            <Link className="rounded-md border bg-white p-4 md:col-span-2" href="/docs/avatar">
+              Avatar
+            </Link>
+            <Link href="/docs/badge" className="rounded-md border bg-white p-4 md:col-span-1">
+              Badge
+            </Link>
+            <Link href="/docs/breadcrumbs" className="rounded-md border bg-white p-4 md:col-span-1">
+              Breadcrumbs
+            </Link>
+            <Link href="/docs/checkbox" className="rounded-md border bg-white p-4 md:col-span-1">
+              Checkbox
+            </Link>
+            <Link
+              href="/docs/checkbox-group"
+              className="rounded-md border bg-white p-4 md:col-span-2"
+            >
+              Checkbox Group
+            </Link>
+            <Link href="/docs/label" className="rounded-md border bg-white p-4 md:col-span-1">
+              Label
+            </Link>
+            <Link href="/docs/spinner" className="rounded-md border bg-white p-4 md:col-span-1">
+              Spinner
+            </Link>
+            <Link href="/docs/table" className="rounded-md border bg-white p-4 md:col-span-1">
+              Table
+            </Link>
+            <Link href="/docs/tabs" className="rounded-md border bg-white p-4 md:col-span-1">
+              Tabs
+            </Link>
+            <Link href="/" className="rounded-md border bg-white p-4 md:col-span-1">
+              Coming soon
+            </Link>
+            <Link href="/" className="rounded-md border bg-white p-4 md:col-span-1">
+              Coming soon
+            </Link>
+            <Link href="/" className="rounded-md border bg-white p-4 md:col-span-1">
+              Coming soon
+            </Link>
+            <Link href="/" className="rounded-md border bg-white p-4 md:col-span-1">
+              Coming soon
+            </Link>
+            <Link href="/" className="rounded-md border bg-white p-4 md:col-span-1">
+              Coming soon
+            </Link>
           </div>
         </div>
       </section>

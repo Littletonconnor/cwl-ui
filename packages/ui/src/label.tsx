@@ -45,7 +45,7 @@ const Label = React.forwardRef<HTMLLabelElement, LabelProps>(
           {children && <span>{children}</span>}
           {description && (
             <span className={cn('text-surface-500 font-normal', disabled && 'text-current')}>
-              {children}
+              {description}
             </span>
           )}
           {required && <span className="text-destructive font-normal">*</span>}
