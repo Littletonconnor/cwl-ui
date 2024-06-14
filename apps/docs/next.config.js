@@ -4,13 +4,8 @@ module.exports = {
   redirects() {
     return [
       {
-        source: '/docs/components',
-        destination: '/docs/components/breadcrumbs',
-        permanent: true,
-      },
-      {
-        source: '/getting-started',
-        destination: '/getting-started/introduction',
+        source: '/',
+        destination: '/docs/avatar',
         permanent: true,
       },
     ]

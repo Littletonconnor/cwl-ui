@@ -1,6 +1,6 @@
 ---
 title: Text
-description: A set of typography components.
+description: A component for displaying text.
 isComponent: true
 ---
 
@@ -9,19 +9,33 @@ isComponent: true
 
 ## Examples
 
-### Strong text
+### With text alignment
 
-Use the strong text component when you need to draw attention to something. 
+Text components can take an align property to align text.
 
-<ComponentDemo name="text" story="text" />
-<ComponentSource src="../storybook/src/components/text/stories/text.tsx" />
+<ComponentDemo name="text" story="align" />
+<ComponentSource src="../storybook/src/components/text/stories/align.tsx" />
 
-### Headings
+### With text color
 
-Use headings when you need H tags.
+Text comes with a color property to change the text color.
 
-<ComponentDemo name="text" story="headings" />
-<ComponentSource src="../storybook/src/components/text/stories/headings.tsx" />
+<ComponentDemo name="text" story="color" />
+<ComponentSource src="../storybook/src/components/text/stories/color.tsx" />
+
+### With text sizes
+
+Text comes in a few different sizes.
+
+<ComponentDemo name="text" story="sizes" />
+<ComponentSource src="../storybook/src/components/text/stories/sizes.tsx" />
+
+### With text truncation
+
+Text can be truncated with an ellipsis.
+
+<ComponentDemo name="text" story="truncate" />
+<ComponentSource src="../storybook/src/components/text/stories/truncate.tsx" />
 
 ### Installation
 

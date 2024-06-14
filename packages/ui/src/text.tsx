@@ -3,8 +3,6 @@ import * as React from 'react'
 import { type AtomicProperties, type TextSizes } from './lib/types'
 import { cn } from './lib/utils'
 
-// neutral
-
 interface TextProps {
   /**
    * Represents the alignment of the Text.
@@ -22,21 +20,39 @@ interface TextProps {
   children: React.ReactNode
 
   /**
+   * Optional class to add to the Text.
+   */
+  className?: string
+
+  /**
    * Represents the tag of the Text.
    */
-  Tag?: React.ElementType
+  Tag?: 'p' | 'span'
 
   /**
    * Represents the size of the Text.
    */
   size?: TextSizes
+
+  /**
+   * Truncate the number of lines of the Text.
+   */
+  truncate?: 1 | 2 | 3
 }
 
-const Text = ({ align, children, color = 'neutral', size, Tag = 'p', ...props }: TextProps) => {
+const Text = ({
+  align,
+  children,
+  color = 'primary',
+  className,
+  size,
+  truncate,
+  Tag = 'p',
+  ...props
+}: TextProps) => {
   return (
     <Tag
       className={cn(
-        'text-primary',
         size === 'xsmall' && 'text-xs font-normal leading-4',
         size === 'small' && 'text-sm font-normal leading-5',
         size === 'standard' && 'text-base font-normal leading-6',
@@ -44,12 +60,14 @@ const Text = ({ align, children, color = 'neutral', size, Tag = 'p', ...props }:
         align === 'left' && 'text-left',
         align === 'center' && 'text-center',
         align === 'right' && 'text-right',
-        color === 'neutral' && 'text-gray-900',
-        color === 'secondary' && 'text-gray-700',
-        color === 'promote' && 'text-purple-600',
-        color === 'info' && 'text-blue-600',
-        color === 'positive' && 'text-green-700',
-        color === 'critical' && 'text-red-600',
+        color === 'primary' && 'text-primary',
+        color === 'secondary' && 'text-secondary',
+        color === 'destructive' && 'text-destructive',
+        color === 'positive' && 'text-positive',
+        truncate === 1 && 'line-clamp-1',
+        truncate === 2 && 'line-clamp-2',
+        truncate === 3 && 'line-clamp-3',
+        className,
       )}
       {...props}
     >

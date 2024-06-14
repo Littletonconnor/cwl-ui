@@ -10,19 +10,18 @@ export type ThemeColors = {
   secondary: ThemeColorScale
   surface: ThemeColorScale
   destructive: ThemeColorScale
+  positive: ThemeColorScale
 }
 
 export const themeColorsLight: ThemeColors = {
   background: palette.black.DEFAULT,
   foreground: palette.gray[900],
 
-  primary: {
-    ...palette.purple,
-  },
+  primary: palette.gray[900],
 
   secondary: {
     ...palette.gray,
-    DEFAULT: palette.gray[900],
+    DEFAULT: palette.gray[600],
   },
 
   surface: {
@@ -33,6 +32,11 @@ export const themeColorsLight: ThemeColors = {
   destructive: {
     ...palette.red,
     DEFAULT: palette.red[500],
+  },
+
+  positive: {
+    ...palette.green,
+    DEFAULT: palette.green[600],
   },
 }
 
@@ -57,6 +61,10 @@ export const themeColorsDark: ThemeColors = {
 
   destructive: {
     ...palette.red,
+  },
+
+  positive: {
+    ...palette.green,
   },
 }
 

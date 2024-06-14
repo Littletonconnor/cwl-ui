@@ -1,3 +1,5 @@
+import { type ThemeColors } from 'cwl-ui-colors'
+
 type Sizes = 'xsmall' | 'small' | 'standard' | 'large'
 type TextSizes = Sizes
 
@@ -10,7 +12,7 @@ interface AtomicProperties {
   /**
    * Represents main colors from our color system.
    */
-  color?: 'neutral' | 'secondary' | 'promote' | 'info' | 'positive' | 'critical'
+  color?: keyof ThemeColors
 }
 
 export type { TextSizes, AtomicProperties }

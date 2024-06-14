@@ -119,7 +119,6 @@ const componentLinks = [
   {
     title: 'Text',
     href: '/docs/text',
-    comingSoon: true,
   },
   {
     title: 'TextArea',
