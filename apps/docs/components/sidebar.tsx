@@ -71,6 +71,10 @@ const componentLinks = [
     comingSoon: true,
   },
   {
+    title: 'Heading',
+    href: '/docs/heading',
+  },
+  {
     title: 'Input',
     href: '/docs/input',
     comingSoon: true,
