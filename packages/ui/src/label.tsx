@@ -1,23 +1,11 @@
 import * as React from 'react'
 
+import { AtomicProperties } from './lib/types'
 import { cn } from './lib/utils'
 
-interface LabelProps extends React.HtmlHTMLAttributes<HTMLLabelElement> {
-  /*
-   * Additional description text that shows up next to the primary label.
-   */
-  description?: string
-
-  /*
-   * Indicates if the label is associated with a required field.
-   */
-  required?: boolean
-
-  /*
-   * Indicated if the label is associated with a disabled field.
-   */
-  disabled?: boolean
-
+interface LabelProps
+  extends React.HtmlHTMLAttributes<HTMLLabelElement>,
+    Pick<AtomicProperties, 'description' | 'required' | 'disabled'> {
   /*
    * Associate the label to an input field.
    */

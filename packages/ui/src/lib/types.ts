@@ -14,6 +14,41 @@ interface AtomicProperties {
    * Represents main colors from our color system.
    */
   color?: keyof ThemeColors
+
+  /**
+   * An optional description to be rendered within the input field.
+   */
+  description?: React.ReactNode
+
+  /**
+   * An optional label to describe the input field.
+   */
+  label?: React.ReactNode
+
+  /**
+   * Represents the disabled state of the input field.
+   */
+  disabled?: boolean
+
+  /**
+   * Optional helper text that should be rendered below the input field.
+   */
+  helperText?: React.ReactNode
+
+  /**
+   * Represents whether or not the input field is required.
+   */
+  required?: boolean
+
+  /**
+   * An optional slot to go before the input field.
+   */
+  leadingAccessory?: React.ReactNode
+
+  /**
+   * An optional slot to go after the input field.
+   */
+  trailingAccessory?: React.ReactNode
 }
 
 interface TypographyProperties {

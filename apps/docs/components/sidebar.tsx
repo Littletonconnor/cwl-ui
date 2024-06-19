@@ -104,6 +104,10 @@ const componentLinks = [
     comingSoon: true,
   },
   {
+    title: 'Slider',
+    href: '/docs/slider',
+  },
+  {
     title: 'Spinner',
     href: '/docs/spinner',
   },

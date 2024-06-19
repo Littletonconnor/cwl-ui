@@ -181,6 +181,12 @@ export const Index: ComponentRegistry = {
       component: React.lazy(() => import("@/registry/label/disabled")),
       file: "registry/label/disabled.tsx"
     },
+    "helper": {
+      name: "label-helper",
+      story: "helper",
+      component: React.lazy(() => import("@/registry/label/helper")),
+      file: "registry/label/helper.tsx"
+    },
     "required": {
       name: "label-required",
       story: "required",
@@ -194,6 +200,32 @@ export const Index: ComponentRegistry = {
       story: "default",
       component: React.lazy(() => import("@/registry/progress/default")),
       file: "registry/progress/default.tsx"
+    },
+  },
+  "slider": {
+    "default": {
+      name: "slider-default",
+      story: "default",
+      component: React.lazy(() => import("@/registry/slider/default")),
+      file: "registry/slider/default.tsx"
+    },
+    "disabled": {
+      name: "slider-disabled",
+      story: "disabled",
+      component: React.lazy(() => import("@/registry/slider/disabled")),
+      file: "registry/slider/disabled.tsx"
+    },
+    "orientation": {
+      name: "slider-orientation",
+      story: "orientation",
+      component: React.lazy(() => import("@/registry/slider/orientation")),
+      file: "registry/slider/orientation.tsx"
+    },
+    "range": {
+      name: "slider-range",
+      story: "range",
+      component: React.lazy(() => import("@/registry/slider/range")),
+      file: "registry/slider/range.tsx"
     },
   },
   "spinner": {
