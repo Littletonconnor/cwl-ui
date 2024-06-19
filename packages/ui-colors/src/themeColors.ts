@@ -21,7 +21,7 @@ export const themeColorsLight: ThemeColors = {
 
   secondary: {
     ...palette.gray,
-    DEFAULT: palette.gray[600],
+    DEFAULT: palette.gray[400],
   },
 
   surface: {

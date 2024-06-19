@@ -1,3 +1,5 @@
+import * as React from 'react'
+
 import { clsx, type ClassValue } from 'clsx'
 import { composeRenderProps } from 'react-aria-components'
 import { twMerge } from 'tailwind-merge'
@@ -27,6 +29,15 @@ export function composeTailwindRenderProps<T>(
  */
 export const cn = (...inputs: ClassValue[]) => {
   return twMerge(clsx(...inputs))
+}
+
+/**
+ * Checks if the given element is a React element.
+ * @param element - The element to check
+ * @returns Whether the element is a React element.
+ */
+export const isReactElement = (element: React.ReactNode): element is React.ReactElement => {
+  return React.isValidElement(element)
 }
 
 /**

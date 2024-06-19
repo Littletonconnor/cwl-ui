@@ -44,7 +44,7 @@ const Label = React.forwardRef<HTMLLabelElement, LabelProps>(
         >
           {children && <span>{children}</span>}
           {description && (
-            <span className={cn('text-surface-500 font-normal', disabled && 'text-current')}>
+            <span className={cn('text-secondary font-normal', disabled && 'text-current')}>
               {description}
             </span>
           )}
@@ -55,6 +55,32 @@ const Label = React.forwardRef<HTMLLabelElement, LabelProps>(
   },
 )
 
-Label.displayName = 'Label'
+const LabelHelperText = React.forwardRef<
+  HTMLSpanElement,
+  React.HtmlHTMLAttributes<HTMLSpanElement> & { error?: boolean; disabled?: boolean }
+>(({ children, error, disabled, className, ...props }, ref) => {
+  // FIXME: change to be more flexible
+  const Tag = 'span'
+  const ariaInvalid = props['aria-invalid']
 
-export { Label }
+  return (
+    <Tag
+      ref={ref}
+      className={cn(
+        'text-secondary font-normal text-sm antialiased',
+        (ariaInvalid ?? error) && 'text-destructive',
+        disabled && 'text-surface-300',
+        className,
+      )}
+      role={ariaInvalid ? 'role' : undefined}
+      {...props}
+    >
+      {children}
+    </Tag>
+  )
+})
+
+Label.displayName = 'Label'
+LabelHelperText.displayName = 'LabelHelperText'
+
+export { Label, LabelHelperText }
