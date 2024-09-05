@@ -19,7 +19,7 @@ const Heading = ({
         size === 'large' && 'text-3xl font-normal leading-9',
         align === 'left' && 'text-left',
         align === 'center' && 'text-center',
-        align === 'center' && 'text-right',
+        align === 'right' && 'text-right',
         color === 'primary' && 'text-primary',
         color === 'secondary' && 'text-secondary',
         color === 'positive' && 'text-positive',

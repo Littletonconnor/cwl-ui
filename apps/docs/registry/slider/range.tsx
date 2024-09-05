@@ -13,7 +13,7 @@ export default function Disabled() {
         leadingAccessory="$2,500"
         trailingAccessory="$10,000"
         onValueChange={(val) => setValue(val)}
-        min={1000}
+        min={2500}
         max={10000}
         helperText={
           'Selected range: $' +
